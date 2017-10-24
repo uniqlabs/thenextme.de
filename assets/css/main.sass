@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500')
+
+$white: #fff
+$tWhite95: rgba(255, 255, 255, 0.95)
+$lightGray: #f6f6f6
+$lightSilver: #eee
+$silver: #ccc
+$mediumGray: #999
+$gray: #808080
+$darkGray: #333
+$red: #f55
+$dRed15: #d94848
+$green: #37c8ab
+$dGreen15: #2faa92
+
+$lightGreen: #9be3d5
+
+$headingFont: 'Bree Serif'
+$textFont: 'Raleway'
+
+$coverHeight: 100vh
+
+body, html, button, input, select, textarea, a, p
+  font-family: $textFont, sans-serif
+  font-weight: 400
+
+h1, h2, h3, h4, h5
+  font-family: $headingFont, serif
+
+h1
+  font-size: 48px
+
+h2
+  font-size: 36px
+
+p
+  font-size: 16px
+
+a
+  color: $darkGray
+
+a:hover, a:active, a:focus
+  color: $red
+  text-decoration: none
+
+span.rv
+  unicode-bidi: bidi-override
+  direction: rtl
+
+.btn
+  min-height: 36px
+  font-size: 13px
+  font-weight: 500
+  text-transform: uppercase
+
+a.btn
+  padding: 9px 16px 7px
+
+.btn-action
+  color: $white
+  background: $red
+
+.btn-action:hover
+  background: $dRed15
+
+.btn-green
+  color: $white
+  background: $green
+
+.btn-green:hover, .btn-green:focus
+  color: $white
+  background: $dGreen15
+
+section, footer
+  position: relative
+  width: 100%
+
+.mobile-nav
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  background: rgba(255, 255, 255, 0.97)
+  z-index: 10000
+  img
+    position: relative
+    top: 7px
+    left: -15px
+  a
+    font-size: 18px
+    color: $darkGray
+    text-transform: uppercase
+  a:hover
+    color: $red
+  button.nav-close
+    display: inline-block
+    width: 24px
+    height: 24px
+    background: url('/assets/img/ic_nav_close.png') no-repeat center center / 24px 24px
+    cursor: pointer
+    border: none
+    outline: none
+    transition: transform 200ms
+    margin: 19px 17px 0 0
+  .nav-close:hover
+    transform: scale(1.1)
+
+@media(max-width: 575px)
+  .mobile-nav
+    img
+      left: 1px
+    button.nav-close
+      margin-right: 33px
+
+#navbar
+  height: 64px
+  transition: all 600ms
+  .navbar-brand
+    position: relative
+    img
+      position: absolute
+      left: 0
+      top: -20px
+  #logo
+    display: none
+    z-index: 2
+  #logo-white
+    z-index: 3
+  .navbar-toggler
+    cursor: pointer
+    padding-top: 7px
+    outline: none
+  .navbar-toggler-icon
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+  .nav-link
+    font-size: 14px
+    font-weight: 500
+    text-transform: uppercase
+    color: $white
+    transition: transform 200ms
+  .nav-link:not(.signup):hover
+    transform: scale(1.05)
+  .nav-link.signup
+    display: inline-block
+    font-size: 13px
+    padding: 8px 16px
+    margin-top: -2px
+    color: $white
+    border: 1px solid $white
+    border-radius: 4px
+    transition: background 300ms
+  .nav-link.signup:hover
+    background: $green
+    border: 1px solid $green
+  .navbar-collapse.collapse.show
+    margin-top: 24px
+    background-color: $white
+
+@media(max-width: 991px)
+  #navbar .navbar-brand img
+    top: -10px
+
+@media(max-width: 575px)
+  #navbar
+    .container
+      margin: 0
+
+#navbar.opaque
+  background: $white
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1)
+  .navbar-toggler-icon
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#333' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+  .nav-link:not(.signup)
+    color: $darkGray
+  .nav-link:not(.signup).active
+    color: $red
+  .nav-link.signup
+    color: $darkGray
+    border: 1px solid $darkGray
+  .nav-link.signup:hover
+    color: $white
+    border: 1px solid $white
+
+.backdrop
+  width: 100%
+  background: $lightGray
+
+.sec-welcome
+  width: 100%
+  height: $coverHeight
+  color: $white
+  z-index: 0
+  .claim
+    margin-top: 12%
+    text-align: center
+  h1
+    font-size: 72px
+  h2
+    font-family: $textFont
+    font-size: 28px
+    font-weight: 300
+  .ticks
+    margin-top: 12px
+    ul
+      margin-left: -26px
+      list-style: none
+      li
+        background: url('/assets/img/ic_checkmark_white.png') no-repeat 0 6px / 24px 24px
+        padding: 4px 0 4px 34px
+        font-size: 18px
+
+.sec-program
+  padding-top: 48px
+  z-index: 2
+  .backdrop
+    min-height: 560px
+  .content
+    position: relative
+    z-index: 3
+
+#phone
+  position: absolute
+  width: 308px
+  height: 632px
+  top: -64px
+  right: 5%
+  background: url('/assets/img/bg_phone.png')
+  .screen
+    width: 271px
+    height: 482px
+    background: url('/assets/img/img_screen_01.jpg') no-repeat center center / 271px 482px
+
+@media(max-width: 991px)
+  #phone
+    width: 246px
+    height: 506px
+    top: -110px
+    background: url('/assets/img/bg_phone.png') no-repeat center center / 231px 474px
+    .screen
+      width: 217px
+      height: 386px
+      background: url('/assets/img/img_screen_01.jpg') no-repeat center center / 203px 362px
+
+#notebook
+  position: absolute
+  width: 400px
+  height: 255px
+  bottom: -128px
+  right: calc(5% + 240px)
+  background: url('/assets/img/img_notebook.jpg') no-repeat center center
+
+@media(max-width: 991px)
+  #notebook
+    width: 320px
+    height: 204px
+    bottom: -144px
+    right: calc(5% + 124px)
+    background: url('/assets/img/img_notebook.jpg') no-repeat center center / 320px 204px
+
+.sec-advantages
+  padding: 48px 0
+  background: white
+  z-index: 5
+  img
+    margin-bottom: 16px
+  h4
+    font-family: $textFont
+    font-size: 18px
+    font-weight: bold
+  .container
+    position: relative
+
+.sec-testimonials
+  padding-top: 24px
+  z-index: 5
+  .backdrop
+    min-height: 400px
+  #testis
+    margin-top: 16px
+    z-index: 10
+  .btn-prev, .btn-next
+    position: absolute
+    top: calc(50% - 90px)
+    width: 64px
+    height: 180px
+    transition: transform 400ms
+  .btn-prev
+    left: -36px
+    background: url('/assets/img/btn_prev.png') no-repeat center center / 64px 180px
+  .btn-next
+    right: -36px
+    background: url('/assets/img/btn_next.png') no-repeat center center / 64px 180px
+  .btn-prev:hover, .btn-next:hover
+    cursor: pointer
+    transform: scale(1.1)
+  .testi
+    outline: none
+    padding: 16px
+    margin: 0 8px
+    background: $tWhite95
+    border-radius: 5px
+    h3
+      font-family: $textFont
+      font-size: 32px
+      font-weight: 600
+      margin-bottom: 10px
+    img.rounded-circle
+      float: left
+      vertical-align: middle
+    .meta
+      float: left
+      margin: 24px 0 0 20px
+    .review
+      clear: both
+      padding-top: 16px
+
+#starfish
+  position: absolute
+  width: 141px
+  height: 140px
+  bottom: -240px
+  left: calc(50% - 70px)
+  background: url('/assets/img/img_starfish.jpg') no-repeat center center
+
+.sec-pricing
+  padding: 48px 0
+  background: white
+  z-index: 7
+  p
+    color: $gray
+  ul.ticks
+    margin-left: -22px
+    list-style: none
+    li
+      display: inline-block
+      background: url('/assets/img/ic_checkmark_green.png') no-repeat 0 7px / 24px 24px
+      padding: 4px 24px 4px 30px
+      font-size: 18px
+  table
+    position: relative
+    margin-top: 40px
+    th, td
+      width: 25%
+      font-size: 14px
+      vertical-align: top
+    th
+      text-align: center
+      padding: 16px
+      h3
+        font-family: $textFont
+        font-weight: 600
+      p
+        font-size: 14px
+    th.bb
+      border-bottom: 1px solid $silver
+    th.brush
+      background: url('/assets/img/bg_brush.jpg') no-repeat center center
+    .before, .after
+      font-size: 12px
+      font-weight: 400
+      font-style: italic
+      color: $mediumGray
+    .before
+      margin: 16px 0 -4px
+    .after
+      margin: 8px 0 16px
+    .price
+      font-size: 58px
+      font-weight: 600
+      line-height: 58px
+      margin: 0
+    a.learn-more
+      font-size: 13px
+      font-weight: 600
+      text-transform: uppercase
+      color: $gray
+      padding-top: 0
+    a.learn-more:hover
+      color: $red
+    .br
+      border-right: 1px solid $silver
+    td
+      border-top: 1px solid $silver
+      padding: 16px
+    td.c, td.b
+      text-align: center
+      border-left: 1px solid $silver
+    td.c
+      color: transparent
+      background: url('/assets/img/ic_checkmark_fgreen.png') no-repeat center center / 24px 24px
+    .exp
+      display: inline-block
+      position: relative
+      top: 2px
+      left: 4px
+      width: 16px
+      height: 16px
+      cursor: pointer
+      color: transparent
+      background: url('/assets/img/ic_explanation.png') no-repeat center center / 16px 16px
+      border: none
+
+.sec-faq
+  background: white
+  padding-bottom: 48px
+  .q, .a
+    width: 100%
+    text-align: left
+  .q
+    cursor: pointer
+    font-size: 20px
+    font-weight: 600
+    margin-bottom: 24px
+  .q:before
+    content: ''
+    display: inline-block
+    width: 24px
+    height: 24px
+    margin: 2px 16px 0 -40px
+    vertical-align: top
+    background: url('/assets/img/ic_faq_plus.png') no-repeat center center / 24px 24px
+  .q.open:before
+    background: url('/assets/img/ic_faq_minus.png') no-repeat center center / 24px 24px
+  .a
+    display: none
+    font-size: 14px
+    color: $darkGray
+  hr
+    border-top: 1px solid $lightSilver
+    margin: 24px 0
+
+footer
+  position: absolute
+  padding: 48px 0
+  color: $silver
+  background: $lightGray
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1)
+  a
+    font-size: 13px
+    color: $gray
+  a:hover
+    color: $red

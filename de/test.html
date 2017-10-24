@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test</title>
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+
+</head>
+<body>
+<style>
+    section {
+        position: relative;
+        width: 100%;
+        min-height: 240px
+    }
+
+    #a {
+        background: teal;
+    }
+
+    #b {
+        background: darkcyan;
+        z-index: 2
+    }
+
+    .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+
+    .grellow {
+        top: 220px;
+        left: 50%;
+        background: greenyellow;
+        z-index: 1;
+    }
+
+    .orange {
+        top: 200px;
+        left: 52%;
+        background: orange;
+        z-index: 3;
+    }
+</style>
+
+<section id="a">
+    <div class="box grellow"></div>
+    <div class="box orange"></div>
+</section>
+
+<section id="b"></section>
+
+<section style="background: lightblue"></section>
+
+<section style="background: deepskyblue"></section>
+
+<script src="/assets/js/vendor/rellax.min.js"></script>
+<script>
+    new Rellax('.box');
+</script>
+</body>
+</html>

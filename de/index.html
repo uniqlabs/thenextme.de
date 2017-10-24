@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>TheNextMe - Erneuere Dein Leben!</title>
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/vendor/slick.css" rel="stylesheet"></link><link href="/assets/css/vendor/slick-theme.css" rel="stylesheet"></link>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="64">
+
+<script>
+    function readCookie(name) {
+        var nameEQ = encodeURIComponent(name) + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+        }
+        return null;
+    }
+    function createCookie(name, value, days) {
+        var expires;
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toGMTString();
+        } else {
+            expires = "";
+        }
+        document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+    }
+    var variant = readCookie('variant');
+    if (!variant) {
+        variant = Math.random() < 0.5 ? 'a' : 'b';
+        createCookie('variant', variant, 7);
+    }
+</script>
+
+<nav class="mobile-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+                <img src="/assets/img/ic_tnm_logo.png" width="200" height="48" alt="TheNextMe">
+                <button class="nav-close"></button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="#programm">Programm</a>
+                <hr>
+                <a href="#vorteile">Vorteile</a>
+                <hr>
+                <a href="#nutzerstimmen">Nutzerstimmen</a>
+                <hr>
+                <a href="#pakete-preise">Jetzt anmelden</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav id="navbar" class="navbar navbar-toggleable-md fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button"
+                aria-expanded="false" aria-label="Menü aufklappen">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img id="logo"
+                 src="/assets/img/ic_tnm_logo.png" width="200" height="48" alt="TheNextMe">
+            <img id="logo-white"
+                 src="/assets/img/ic_tnm_logo_white.png" width="200" height="48" alt="TheNextMe">
+        </a>
+        <div id="nbc" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#programm">
+                        Programm</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#vorteile">
+                        Vorteile</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#nutzerstimmen">
+                        Nutzerstimmen</a>
+                </li>
+                <li class="nav-item mx-2 ml-xl-4">
+                    <a class="nav-link signup" href="#pakete-preise">
+                        Jetzt anmelden</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="sec-welcome"
+         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3),
+         rgba(0, 0, 0, 0.7)), url('/assets/img/bg_cover_00.jpg') no-repeat center center;
+         background-size: cover">
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="claim">
+            <h1>Erneuere Dein Leben.</h1>
+            <h2>Erreiche ein persönliches Lebensziel.</h2>
+        </div>
+        <div class="ticks">
+            <ul>
+                <li>13-Wochen-Programm</li>
+                <li>persönlicher Coach</li>
+                <li>Geld-zurück-Garantie</li>
+            </ul>
+        </div>
+        <div class="text-center">
+            <a href="#programm" class="btn btn-green">Mehr erfahren</a>
+        </div>
+    </div>
+</section>
+
+<section id="programm" class="sec-program">
+    <div class="container">
+        <div class="backdrop p-5">
+            <div class="row">
+                <div class="col-12 col-md-7 content">
+                    <h2 class="mb-4">Dein Ziel.<br>Unser Coach an Deiner Seite.</h2>
+                    <p><i>TheNextMe</i> ist das erste Programm zur digitalen kognitiven Zielerreichung.
+</p>
+                    <p>Egal, ob Du gern einen erfüllteren Job hättest, in einer Beziehung wärst oder Dich gesünder fühlen möchtest: Wir helfen Dir, Dein Lebensziel konkret zu machen, einen Aktionsplan zu schmieden und stellen Dir einen persönlichen Coach zur Seite, der Dich für 13 Wochen begleitet.
+</p>
+                </div>
+            </div>
+            <div id="notebook" class="rellax" data-rellax-speed="1"></div>
+            <div id="phone" class="d-flex justify-content-center align-items-center rellax"
+                 data-rellax-speed="-1">
+                <div class="screen"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="vorteile" class="sec-advantages">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-md-auto text-center">
+                <h2 class="mb-5">Deine Vorteile bei <i>TheNextMe:</i></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_coach.png" width="96" height="96">
+                <h4>persönlicher Coach</h4>
+                <p>Dein persönlicher Coach steht Dir ab Beginn des Programms zur Verfügung, spricht am Telefon mit Dir und begleitet Dich per Chat.
+</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_method.png" width="96" height="96">
+                <h4>bewiesene Methode</h4>
+                <p>Unsere Coaches lösen mentale Barrieren mit einer bewiesenen, wissenschaftlich fundierten Methode im Gespräch mit Dir auf.
+</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_plan.png" width="96" height="96">
+                <h4>digitaler Aktionsplan</h4>
+                <p>Unsere App unterstützt Dich bei der Erstellung Deines persönlichen Aktionsplans und beim Tracking Deines Fortschritts.
+</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_privacy.png" width="96" height="96">
+                <h4>vertraulich</h4>
+                <p>Wir behandeln alle Informationen absolut vertraulich und schützen Deine Daten. Du kannst unser Programm sogar anonym nutzen.
+</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_time.png" width="96" height="96">
+                <h4>rund um die Uhr</h4>
+                <p>Dein Coach steht Dir nicht nur während der gebuchten Gespräche zur Verfügung, sondern auch jederzeit per Chat in der App.
+</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="/assets/img/ic_money.png" width="96" height="96">
+                <h4>Geld zurück</h4>
+                <p>Falls <i>TheNextMe</i> nicht für Dich funktioniert, kannst Du jederzeit abbrechen und erhältst Dein Geld zurück.
+</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nutzerstimmen" class="sec-testimonials">
+    <div class="container">
+        <div class="backdrop p-5">
+            <div id="starfish" class="rellax" data-rellax-speed="1"></div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>Was unsere Nutzer sagen</h2>
+                    <p><b>9</b> von <b>10</b> unserer Nutzer erreichen ihr Ziel. Lies selbst, was sie sagen.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="btn-prev"></div>
+                    <div id="testis">
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Anka38.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Anka, 38</h3>
+                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>Ich bin Modefotografin und hatte eine finanziell schwierige Phase, in der ich von 200€ im Monat lebte. [...] Das Coaching-Gespräch war ein totales Aufwacherlebnis für mich. Seitdem vertrete ich den Wert meiner Arbeit selbstbewusst und verdiene am Tag ein Vielfaches mehr als vorher im Monat.
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Elli34.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Elli, 34</h3>
+                                <img src="/assets/img/ic_rating_4.5.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>Auf der Suche nach meinem Traumjob habe ich viele Bücher gelesen, aber konnte diese schlecht in die Tat umsetzen. [....] Mit meinem Coach habe ich einen sehr konkreten Aktionsplan erstellt, um mich als Organisationsberaterin selbstständig zu machen. Das funktioniert super.
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Melanie56.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Melanie, 56</h3>
+                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>Vor vier Jahren habe ich mich von meinem Mann getrennt und seitdem bin ich Single. [...] Durch die Übungen bei <i>TheNextMe</i> habe ich realisiert, was ich wirklich in einer Beziehung möchte und der Aktionsplan hat mich zurück ins Dating gebracht. Jetzt bin ich frisch verliebt!
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Eckart78.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Eckart, 78</h3>
+                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>Seit längerer Zeit kam ich mit dem Russischlernen nicht voran. Im Coaching-Gespräch habe ich mir ein großes Ziel gesteckt: Meine Tochter einmal durch die russische U-Bahn zu lotsen. Von da ab war ich motiviert und vor einem Monat haben wir gemeinsam Moskau erkundet. Wunderbar!
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Ralf41.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Ralf, 41</h3>
+                                <img src="/assets/img/ic_rating_4.5.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>Ich bewerbe mich gerade auf meine Traumstelle und <i>TheNextMe</i> begleitet mich dabei. Die Gespräche helfen mir, alle persönlichen Zweifel vor Veränderung auszuräumen. Das erleichtert mich sehr. [...] Ich stelle mich nun selbstbewusst und mit positiver Ausstrahlung meiner Bewerbungsrunde.
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Uta41.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Uta, 41</h3>
+                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p><i>TheNextMe</i> hat mich dort abgeholt, wo ich seit Langem auf der Stelle getreten bin: meine Berufung zu finden und zu leben. Das Coaching hat mir geholfen, den Traum meiner Selbstständigkeit konkret zu machen. Vor zwei Wochen habe ich meinen eigenen Online-Shop eröffnet.
+</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="testi">
+                            <img src="/assets/img/testimonials/Bianca32.jpg"
+                                 class="rounded-circle" width="120px" height="120px">
+                            <div class="meta">
+                                <h3>Bianca, 32</h3>
+                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
+                            </div>
+                            <div class="review">
+                                <p>In meinem Job war ich viel unterwegs und habe auch oft am Wochenende gearbeitet. Auf der Suche nach geregelteren Arbeitszeiten ergab sich die Möglichkeit intern zu wechseln. <i>TheNextMe</i> hat mich unterstützt, diesen Schritt zu gehen. [...] Ich habe am Ende mein Ziel problemlos erreicht. Danke!</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="btn-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pakete-preise" class="sec-pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-md-auto text-center">
+                <h2 class="mb-4">Wähle Dein Paket</h2>
+                <ul class="ticks">
+                    <li>13-Wochen-Programm</li>
+                    <li>persönlicher Coach</li>
+                    <li>Geld-zurück-Garantie</li>
+                </ul>
+                <p>Du kannst bezahlte Pakete problemlos stornieren und erhältst Dein Geld zurück.
+<br>Du hast noch Fragen? <a href="#haufige-fragen">
+                    Hier findest Du Antworten.</a></p>
+            </div>
+        </div>
+        <div class="row hidden-md-down">
+            <div class="col-12 col-md-10 mx-md-auto">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th class="br bb"><i>ohne Coach</i></th>
+                        <th colspan="2" class="bb brush"><i>mit persönlichem Coach</i></th>
+                    </tr>
+                    <tr>
+                        <th class="br">&nbsp;</th>
+                        <th class="br">
+                            <h3>Free</h3>
+                            <div class="before">&nbsp;</div>
+                            <div class="price">&euro;0</div>
+                            <div class="after">&nbsp;</div>
+                            <button class="btn btn-secondary mb-4">Auswählen</button>
+                            <p>Wenn Du unsere App auf eigene Faust nutzen willst.
+</p>
+                        </th>
+                        <th class="br">
+                            <h3>Basic</h3>
+                            <div class="before">
+                                <script>document.write(variant === 'a' ? 'einmalig' : 'monatlich');</script>
+                            </div>
+                            <div class="price">
+                                <script>document.write(variant === 'a' ? '&euro;149' : '&euro;49');</script>
+                            </div>
+                            <div class="after">
+                                <script>document.write(variant === 'a' ? '(für 13 Wochen)' : '(für 3 Monate)');</script>
+                            </div>
+                            <button class="btn btn-action mb-4">Auswählen</button>
+                            <p>Buche einen Coach und erhöhe Deine Erfolgswahrscheinlichkeit um das Zehnfache.
+</p>
+                        </th>
+                        <th>
+                            <h3>Pro</h3>
+                            <div class="before">
+                                <script>document.write(variant === 'a' ? 'einmalig' : 'monatlich');</script>
+                            </div>
+                            <div class="price">
+                                <script>document.write(variant === 'a' ? '&euro;239' : '&euro;79');</script>
+                            </div>
+                            <div class="after">
+                                <script>document.write(variant === 'a' ? '(für 13 Wochen)' : '(für 3 Monate)');</script>
+                            </div>
+                            <button class="btn btn-action mb-4">Auswählen</button>
+                            <p>Buche mehr Coaching-Gespräche und erfahre die bestmögliche Unterstützung.
+</p>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Online-Module in der App
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Nutze verschiedene Module in unserer App, um Dein Ziel zu finden und konkret zu machen.
+">?</span></td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Aktionsplan
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Erstelle Deinen Aktionsplan mit konkreten messbaren Meilensteinen in der App.
+">?</span></td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Tracking Deines<br>Fortschritts
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Verfolge täglich Deinen Fortschritt, erhalte Erinnerungen und hake Meilensteine ab.
+">?</span></td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Coaching-Gespräch für ein klares Ziel
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Dein Coach schärft im persönlichen Gespräch mit Dir Dein gesteckte Ziel und hilft Dir mentale Barrieren auszuräumen.
+">?</span></td>
+                        <td class="b">&nbsp;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>13 Wochen Chatbegleitung
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Du kannst Dich 24/7 an Deinen Coach wenden, egal, was Dich bewegt. Dein Coach fragt nach und motiviert Dich, auch wenn es mal nicht glatt läuft, per Chat in unserer App.
+">?</span></td>
+                        <td class="b">&nbsp;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Maßgeschneiderte Mindset-Übungen
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Nur mit einem neuen Mindset werden neue Ergebnisse möglich. Dein Coach gibt Dir maßgeschneiderte Übungen, die Dir helfen, Dein neues Mindset im Alltag zu verankern.
+">?</span></td>
+                        <td class="b">&nbsp;</td>
+                        <td class="c">&#x2713;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Coaching-Gespräch für den perfekten Aktionsplan
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Dein Coach hilft Dir, Deinen Aktionsplan zu justieren, Meilensteine zu konkretisieren und die
+ Erfolgswahrscheinlichkeit des Plans zu maximieren.
+">?</span></td>
+                        <td class="b">&nbsp;</td>
+                        <td class="b">&nbsp;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td>Coaching-Gespräch für erfolgreiche Umsetzung
+                            <span class="exp" data-toggle="tooltip"
+                                  title="Bei der Umsetzung lauern erfahrungsgemäß die schwierigsten Hürden. Dein Coach hilft Dir, sie erfolgreich zu nehmen.
+">?</span></td>
+                        <td class="b">&nbsp;</td>
+                        <td class="b">&nbsp;</td>
+                        <td class="c">&#x2713;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="haufige-fragen" class="sec-faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-sm-auto text-center">
+                <h3 class="mb-4">Häufige Fragen und Antworten</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 mx-md-auto pl-md-5">
+                <hr>
+                
+                <div class="q pl-md-5">Für wen ist das <i>Free</i>-Paket geeignet?</div>
+                <div class="a">
+                    <div class="pl-md-5">Wenn Du unsere App zur Zielerreichung einfach ausprobieren möchtest, kannst Du mit dem kostenlosen <i>Free</i>-Paket einsteigen. Bei der Umsetzung Deines Plans bist Du dann auf Dich allein gestellt.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Wann lohnt sich ein bezahltes Paket?</div>
+                <div class="a">
+                    <div class="pl-md-5">Wenn Du Dein Ziel mit möglichst hoher Wahrscheinlichkeit erreichen möchtest, empfiehlt es sich, die Begleitung durch einen persönlichen Coach zu buchen. Im <i>Basic</i>-Paket hast Du dabei ein Coaching-Gespräch zur Ausrichtung auf Dein Ziel, im <i>Pro</i>-Paket erhältst Du mit drei Coaching-Gesprächen die bestmögliche Unterstützung.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Ist mein Coach ein echter Mensch?</div>
+                <div class="a">
+                    <div class="pl-md-5">Ja. Unsere Coaches sind sorgfältig ausgewählt und haben eine Ausbildung in Methoden zur kognitiven Zielerreichung durchlaufen. Sie begleiten Dich persönlich über den Zeitraum von 13 Wochen.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Wie verläuft ein Coaching-Gespräch?</div>
+                <div class="a">
+                    <div class="pl-md-5">Du und Dein Coach wählt Euch auf einer Telefonkonferenznummer ein und sprecht für ca. 30min. Dein Coach stellt Dir Fragen. Du wirst während des Gesprächs eine Menge Erkenntnisse haben.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Was bekomme ich außer Coaching-Gesprächen?</div>
+                <div class="a">
+                    <div class="pl-md-5">In allen bezahlten Paketen steht Dir Dein Coach 13 Wochen per Chat zur Verfügung und Du erhältst auf Dich zugeschnittene Übungen, um das neue Mindset zur Erreichung Deines Ziels im Alltag zu verankern.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Wie funktioniert die Geld-zurück-Garantie?</div>
+                <div class="a">
+                    <div class="pl-md-5">Wenn unser Programm nicht für Dich funktioniert, kannst Du es in den ersten 14 Tagen abbrechen und erhältst den vollen Betrag zurück. Das gilt auch, wenn Du bereits ein Coaching-Gespräch in Anspruch genommen hast. Auch danach kannst Du das Programm abbrechen und erhältst dann den Restbetrag zurück.
+</div>
+                    <hr>
+                </div>
+                
+                <div class="q pl-md-5">Kann ich von einem Paket ins andere wechseln?</div>
+                <div class="a">
+                    <div class="pl-md-5">Ja, Du kannst jederzeit up- oder downgraden. Bei einem Wechsel von einem bezahlten Paket zurück ins <i>Free</i>-Paket gelten die Bedingungen unserer Geld-zurück-Garantie.
+</div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>&copy; 2017 - TheNextMe &bull; Uniq Coaching GmbH</div>
+                <a href="/de/impressum/">Impressum</a> &bull;
+                <a href="#">AGB</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="/assets/js/vendor/rellax.min.js"></script>
+<script src="/assets/js/vendor/slick.min.js"></script>
+<script src="/assets/js/main.min.js"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-88473477-4', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+</html>
