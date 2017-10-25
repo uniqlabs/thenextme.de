@@ -9,9 +9,26 @@
     <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
     <link href="/assets/css/main.css" rel="stylesheet">
     
+    <script>
+        var das = 'ga-disable-UA-88473477-4';
+        if (document.cookie.indexOf(das + '=true') > -1) window[das] = true;
+        function gaOptout() {
+            document.cookie = das + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+            window[das] = true;
+        }
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MGDD4D5');</script>
 </head>
 
 <body>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGDD4D5"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
 <nav class="navbar">
     <div class="container">
@@ -106,6 +123,9 @@ Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowi
 Google verhindern, indem sie das <a href="http://tools.google.com/dlpage/gaoptout?hl=de">hier verfügbare Browser-Plugin</a>
 herunterladen und installieren.</p>
 
+<p>Alternativ können Sie die Erfassung von Google-Analytics-Daten
+<a href="javascript:gaOptout();alert('Google Analytics wurde für diese Webseite deaktiviert.');">für diese Webseite deaktivieren</a>.</p>
+
 <p>Quellen: <a href="https://www.e-recht24.de">eRecht24</a>, <a href="http://www.google.com/intl/de/analytics/learn/privacy.html">Google Analytics</a></p>
 
             </div>
@@ -131,21 +151,6 @@ herunterladen und installieren.</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-88473477-4', 'auto');
-    ga('send', 'pageview');
-</script>
 
 </body>
 </html>
