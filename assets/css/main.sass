@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif')
+@import '../../node_modules/sassdash/index'
+@import '../../node_modules/sass-svg/index'
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700')
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500')
 
 $white: #fff
 $tWhite95: rgba(255, 255, 255, 0.95)
 $lightGray: #f6f6f6
 $lightSilver: #eee
+$lightAsh: #e7edeb
+$chrome: #ddd
 $silver: #ccc
 $mediumGray: #999
 $gray: #808080
 $darkGray: #333
-$red: #f55
-$dRed15: #d94848
-$green: #37c8ab
-$dGreen15: #2faa92
+$primary: #00aad4
+$dPrimary: darken($primary, 10%)
+$secondary: #00aad4
+$dSecondary: darken($secondary, 10%)
+$tertiary: #f55
+$dTertiary: lighten($tertiary, 5%)
 
-$lightGreen: #9be3d5
-
-$headingFont: 'Bree Serif'
+$headingFont: 'Source Sans Pro'
 $textFont: 'Raleway'
-
-$coverHeight: 100vh
 
 body, html, button, input, select, textarea, a, p
   font-family: $textFont, sans-serif
@@ -27,6 +29,7 @@ body, html, button, input, select, textarea, a, p
 
 h1, h2, h3, h4, h5
   font-family: $headingFont, serif
+  font-weight: 700
 
 h1
   font-size: 48px
@@ -41,43 +44,69 @@ a
   color: $darkGray
 
 a:hover, a:active, a:focus
-  color: $red
+  color: $tertiary
   text-decoration: none
 
 p a
-  border-bottom: 1px dashed $gray
+  border-bottom: 1px dashed $silver
+
+p a:hover
+  border-bottom: 1px solid transparent
+
+@media(max-width: 575px)
+  h1
+    font-size: 36px
+  h2
+    font-size: 28px
 
 span.rv
   unicode-bidi: bidi-override
   direction: rtl
 
-.btn
+.btn, .btn-huge, .btn-cta-fixed
   min-height: 36px
   font-size: 13px
   font-weight: 500
   text-transform: uppercase
 
 a.btn
+  color: $white
   padding: 9px 16px 7px
+  outline: none
 
-.btn-action
-  color: $white
-  background: $red
+.btn-huge, a.btn-huge
+  font-size: 18px
+  padding: 18px 64px
 
-.btn-action:hover
-  background: $dRed15
+a.btn-cta-fixed
+  position: fixed
+  width: 90%
+  bottom: 0
+  margin: 0 0 12px 5%
+  padding: 18px
+  font-size: 17px
+  z-index: 100
 
-.btn-green
-  color: $white
-  background: $green
+.btn-primary, .btn-primary:focus
+  background: $primary
+  border: 1px solid $primary
 
-.btn-green:hover, .btn-green:focus
-  color: $white
-  background: $dGreen15
+.btn-primary:hover
+  background: $dPrimary
+  border: 1px solid $dPrimary
 
 section, footer
   position: relative
   width: 100%
+
+@media(min-width: 540px)
+  .p-md-5p
+    padding: 5%
+  .px-md-5p
+    padding-left: 5%
+    padding-right: 5%
+  .pr-md-10p
+    padding-right: 10%
 
 .mobile-nav
   display: none
@@ -95,7 +124,7 @@ section, footer
     color: $darkGray
     text-transform: uppercase
   a:hover
-    color: $red
+    color: $tertiary
   button.nav-close
     display: inline-block
     width: 24px
@@ -105,7 +134,7 @@ section, footer
     border: none
     outline: none
     transition: transform 200ms
-    margin: 19px 17px 0 0
+    margin: 19px 1px 0 0
   .nav-close:hover
     transform: scale(1.1)
 
@@ -114,7 +143,10 @@ section, footer
     img
       left: 1px
     button.nav-close
-      margin-right: 33px
+      margin-right: 17px
+
+.navbar
+  padding: 8px 48px
 
 #navbar
   height: 64px
@@ -134,6 +166,8 @@ section, footer
     cursor: pointer
     padding-top: 7px
     outline: none
+  .navbar-toggler-right
+    right: 0
   .navbar-toggler-icon
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#fff' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
   .nav-link
@@ -141,9 +175,8 @@ section, footer
     font-weight: 500
     text-transform: uppercase
     color: $white
-    transition: transform 200ms
   .nav-link:not(.signup):hover
-    transform: scale(1.05)
+    opacity: 0.5
   .nav-link.signup
     display: inline-block
     font-size: 13px
@@ -154,15 +187,17 @@ section, footer
     border-radius: 4px
     transition: background 300ms
   .nav-link.signup:hover
-    background: $green
-    border: 1px solid $green
+    background: $primary
+    border: 1px solid $primary
   .navbar-collapse.collapse.show
     margin-top: 24px
     background-color: $white
 
 @media(max-width: 991px)
+  .navbar
+    padding: 8px 16px
   #navbar .navbar-brand img
-    top: -10px
+    top: 0
 
 @media(max-width: 575px)
   #navbar
@@ -177,7 +212,7 @@ section, footer
   .nav-link:not(.signup)
     color: $darkGray
   .nav-link:not(.signup).active
-    color: $red
+    color: $primary
   .nav-link.signup
     color: $darkGray
     border: 1px solid $darkGray
@@ -185,100 +220,253 @@ section, footer
     color: $white
     border: 1px solid $white
 
-.backdrop
-  width: 100%
-  background: $lightGray
-
 .sec-welcome
   width: 100%
-  height: $coverHeight
+  height: calc(100vh + 10px)
   color: $white
   z-index: 0
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/assets/img/bg_cover_01.jpg') no-repeat center center
+  background-size: cover
+  .endorsements
+    width: 80%
+    max-width: 180px
+    min-height: 300px
+    background: rgba(255, 255, 255, 0.1)
+    margin-left: -15px
+    padding: 16px
+    border-radius: 0 4px 4px 0
+    p, span
+      font-size: 12px
+      color: $lightSilver
+    img
+      display: inline-block
   .claim
-    margin-top: 12%
-    text-align: center
-  h1
-    font-size: 72px
-  h2
-    font-family: $textFont
-    font-size: 28px
-    font-weight: 300
-  .ticks
-    margin-top: 12px
+    h1
+      font-size: 54px
+    h2
+      font-family: $textFont
+      font-size: 24px
+      font-weight: 400
+      line-height: 1.5
+      margin: 20px 0
+
+#claim
+  height: 100%
+
+#mob-end
+  width: 100%
+  height: 25%
+  padding: 0
+  margin-bottom: 25%
+  .endorsements
+    width: 100%
+    max-width: 100%
+    min-height: 0
+    border-radius: 0
+    margin: 0
+
+@media(max-width: 767px)
+  .sec-welcome
+    height: calc(100vh + 90px)
+    .claim
+      h1
+        font-size: 48px
+      h2
+        font-size: 18px
+  #claim
+    height: 60%
+    justify-content: flex-end !important
+
+.sec-features
+  margin-top: -120px
+  .feature-box
+    height: 120px
+    width: 100%
+    background: rgba(0, 0, 0, 0.4)
+    border-bottom: 10px solid transparent
+    svg
+      margin-top: 8px
+      width: 64px
+      height: 64px
+    p
+      margin-top: -5px
+      color: $white
+      font-weight: 600
+  .feature-box.active, .feature-box:hover
+    cursor: pointer
+    svg path
+      stroke: $secondary
+    p
+      color: $secondary
+  .feature-box.active
+    background: rgba(0, 0, 0, 0.55)
+    border-bottom: 10px solid $secondary
+  .feature-heading
+    padding: 24px 39px
+    h3
+      color: $secondary
+      font-size: 24px
+  .feature-details
+    p
+      color: $gray
+      font-size: 16px
     ul
-      margin-left: -26px
+      margin: 32px 0 40px -42px
       list-style: none
       li
-        background: url('/assets/img/ic_checkmark_white.png') no-repeat 0 6px / 24px 24px
-        padding: 4px 0 4px 34px
-        font-size: 18px
-
-.sec-program
-  padding-top: 48px
-  z-index: 2
-  .backdrop
-    min-height: 560px
-  .content
-    position: relative
-    z-index: 3
-
-#phone
-  position: absolute
-  width: 308px
-  height: 632px
-  top: -64px
-  right: 5%
-  background: url('/assets/img/bg_phone.png')
-  .screen
-    width: 271px
-    height: 482px
-    background: url('/assets/img/img_screen_01.jpg') no-repeat center center / 271px 482px
-
-@media(max-width: 991px)
-  #phone
-    width: 246px
-    height: 506px
-    top: -110px
-    background: url('/assets/img/bg_phone.png') no-repeat center center / 231px 474px
-    .screen
-      width: 217px
-      height: 386px
-      background: url('/assets/img/img_screen_01.jpg') no-repeat center center / 203px 362px
-
-#notebook
-  position: absolute
-  width: 400px
-  height: 255px
-  bottom: -128px
-  right: calc(5% + 240px)
-  background: url('/assets/img/img_notebook.jpg') no-repeat center center
-
-@media(max-width: 991px)
-  #notebook
-    width: 320px
-    height: 204px
-    bottom: -144px
-    right: calc(5% + 124px)
-    background: url('/assets/img/img_notebook.jpg') no-repeat center center / 320px 204px
-
-.sec-advantages
-  padding: 48px 0
-  background: white
-  z-index: 5
-  img
-    margin-bottom: 16px
-  h4
-    font-family: $textFont
+        color: $darkGray
+        background: no-repeat 0 0 / 32px 32px
+        @include svg((viewBox: 0 0 24 24))
+          @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'm 3.217858,14.01096 6.0658,5.41585 11.2649,-16.24755'))
+        margin: 8px 0
+        padding: 0 0 4px 40px
+        font-size: 26px
+        line-height: 1.2
+  .goal-cats svg
+    width: 360px
+    height: 360px
+    g.active
+      circle
+        fill: $secondary
+      path
+        stroke: $white
+  #active-cat
+    position: absolute
+    top: calc(50% - 8px)
     font-size: 18px
-    font-weight: bold
-  .container
+    text-transform: uppercase
+    text-align: center
+    line-height: 1.1
+    color: $secondary
+
+#slide2, #slide3, #slide4
+  opacity: 0
+
+#feature-rows
+  position: relative
+  min-height: 540px
+  width: 100%
+  .row
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+  .phone
     position: relative
+    width: 308px
+    height: 632px
+    background: url('/assets/img/bg_phone.png')
+    .screen
+      position: absolute
+      width: 271px
+      height: 482px
+      top: 75px
+      left: 18px
+    .screen.screen01
+      background: url('/assets/img/img_screen_01.jpg') no-repeat center center / 271px 482px
+    .screen.screen02
+      background: url('/assets/img/img_screen_02.jpg') no-repeat center center / 271px 482px
+    .screen.screen03
+      background: url('/assets/img/img_screen_03.jpg') no-repeat center center / 271px 482px
+
+@media(min-width: 1440px)
+  #feature-rows
+    min-height: 600px
+
+@media(max-width: 991px)
+  #feature-rows
+    min-height: 640px
+
+@media(max-width: 767px)
+  .sec-features
+    margin-top: -90px
+    .feature-box
+      height: 90px
+    .feature-details
+      padding: 24px 39px
+      ul li
+        font-size: 22px
+    .goal-cats svg
+      width: 240px
+      height: 240px
+  #feature-rows
+    min-height: 760px
+    .phone
+      height: 360px
+      overflow-y: hidden
+
+@media(max-width: 575px)
+  #feature-rows
+    min-height: 840px
+
+.sec-video-testimonial
+  height: 75vh
+  background: url('/assets/img/bg_cover_11.jpg') top left no-repeat
+  background-size: cover
+  .video-title
+    .play-button
+      display: inline-block
+      width: 85px
+      height: 85px
+      margin: 24px
+      opacity: 0.8
+      background: url('/assets/img/ic_video_play.png') no-repeat center center / 85px 85px
+      transition: all 400ms
+    h3
+      color: $white
+      font-size: 32px
+      font-family: $textFont
+  .video-title:hover
+    cursor: pointer
+    .play-button
+      opacity: 1
+      transform: scale(1.05)
+
+@media(max-width: 991px)
+  .sec-video-testimonial
+    height: 40vh
+
+.modal-backdrop.show
+  opacity: 0.85
+
+.modal-dialog
+  width: 100%
+  max-width: 100%
+
+@media (min-width: 992px)
+  .modal-dialog
+    width: 80%
+    max-width: 80%
+
+.modal-content
+  margin-top: 0
+  background: none
+  border: 0
+  border-radius: 0
+  box-shadow: none
+
+.modal-body
+  padding: 0 25px 25px 25px
+
+.modal-header
+  padding: 0 25px 15px 25px
+  text-align: right
+
+.modal-header, .modal-footer
+  border: 0
+
+.modal-header .close
+  font-size: 44px
+  color: $white
 
 .sec-testimonials
   padding-top: 24px
-  z-index: 5
-  .backdrop
-    min-height: 400px
+  .heading
+    h2
+      font-size: 48px
+    p
+      font-size: 20px
+      margin: 20px 0 32px
   #testis
     margin-top: 16px
     z-index: 10
@@ -317,130 +505,341 @@ section, footer
     .review
       clear: both
       padding-top: 16px
+    .star
+      display: inline-block
+      width: 25px
+      height: 25px
+    .star.empty
+      @include svg((viewBox: 0 0 25 25))
+        @include svg('path', (fill: none, stroke: $primary, stroke-width: 2, stroke-linejoin: round, d: 'm 12.5,2.0382 2.719402,7.8233 8.280811,0.1688 -6.600128,5.0038 2.39842,7.9277 L 12.5,18.231 5.7014945,22.9618 8.0999147,15.0341 1.4997875,10.0303 9.7805977,9.8615 Z'))
+    .star.half
+      @include svg((viewBox: 0 0 25 25))
+        @include svg('path', (fill: none, stroke: $primary, stroke-width: 2, stroke-linejoin: round, d: 'm 12.5,2.0382 2.719402,7.8233 8.280811,0.1688 -6.600128,5.0038 2.39842,7.9277 L 12.5,18.231 5.7014945,22.9618 8.0999147,15.0341 1.4997875,10.0303 9.7805977,9.8615 Z'))
+        @include svg('path', (fill: $primary, stroke: none, d: 'M 12.5,2.0382 12.5,18.231 5.7014945,22.9618 8.0999147,15.0341 1.4997875,10.0303 9.7805977,9.8615 Z'))
+    .star.full
+      @include svg((viewBox: 0 0 25 25))
+        @include svg('path', (fill: $primary, stroke: $primary, stroke-width: 2, stroke-linejoin: round, d: 'm 12.5,2.0382 2.719402,7.8233 8.280811,0.1688 -6.600128,5.0038 2.39842,7.9277 L 12.5,18.231 5.7014945,22.9618 8.0999147,15.0341 1.4997875,10.0303 9.7805977,9.8615 Z'))
 
-#starfish
-  position: absolute
-  width: 141px
-  height: 140px
-  bottom: -240px
-  left: calc(50% - 70px)
-  background: url('/assets/img/img_starfish.jpg') no-repeat center center
+.step
+  font-size: 12px
+  margin-top: -16px
+  color: $silver
+  text-transform: uppercase
 
 .sec-pricing
-  padding: 48px 0
-  background: white
-  z-index: 7
-  p
+  padding-bottom: 64px
+  .price-box
+    position: relative
+    text-align: center
+    padding: 32px 16px 16px
+    border: 1px solid $silver
+    margin: 0 8px 8px
+    .discount
+      display: none
+      .corner
+        position: absolute
+        content: ''
+        display: block
+        width: 0
+        height: 0
+        top: 0
+        right: 0
+        border-style: solid
+        border-width: 0 96px 96px 0
+        border-color: transparent $lightGray transparent transparent
+      .amount
+        position: absolute
+        top: 7px
+        right: 7px
+        color: $tertiary
+        font-size: 26px
+        font-weight: 600
+        z-index: 10
+        transform: rotate(45deg)
+  .duration
+    font-weight: 600
+    font-size: 18px
     color: $gray
+    text-transform: uppercase
+  .price
+    font-size: 64px
+    font-weight: 600
+    sup
+      font-size: 24px
+      top: -24px
+      left: -4px
+  .interval
+    font-size: 14px
+    margin-left: -52px
+  .billed
+    font-size: 14px
+    color: $gray
+    margin: -8px 0 24px 0
   ul.ticks
-    margin-left: -22px
+    margin-top: 16px
+    text-align: left
     list-style: none
     li
-      display: inline-block
-      background: url('/assets/img/ic_checkmark_green.png') no-repeat 0 7px / 24px 24px
-      padding: 4px 24px 4px 30px
-      font-size: 18px
-  table
+      font-size: 15px
+    li:before
+      content: '✔'
+      margin: 0 14px 0 -26px
+  .btn
+    font-size: 18px
+    padding: 16px 0
+  .btn:hover
+    cursor: pointer
+  .ribbon
     position: relative
-    margin-top: 40px
-    th, td
-      width: 25%
-      font-size: 14px
-      vertical-align: top
-    th
-      text-align: center
-      padding: 16px
-      h3
-        font-family: $textFont
-        font-weight: 600
-      p
-        font-size: 14px
-    th.bb
-      border-bottom: 1px solid $silver
-    th.brush
-      background: url('/assets/img/bg_brush.jpg') no-repeat center center
-    .before, .after
-      font-size: 12px
+    display: inline-block
+    height: 48px
+    font-size: 18px
+    padding: 4px 24px
+    margin: 8px 0
+    color: $white
+    background: $tertiary
+    .discount
+      font-size: 24px
+      font-weight: 600
+    .until
+      font-size: 16px
       font-weight: 400
-      font-style: italic
-      color: $mediumGray
-    .before
-      margin: 16px 0 -4px
-    .after
-      margin: 8px 0 16px
-    .price
-      font-size: 58px
-      font-weight: 600
-      line-height: 58px
-      margin: 0
-    a.learn-more
-      font-size: 13px
-      font-weight: 600
-      text-transform: uppercase
-      color: $gray
-      padding-top: 0
-    a.learn-more:hover
-      color: $red
-    .br
-      border-right: 1px solid $silver
-    td
-      border-top: 1px solid $silver
-      padding: 16px
-    td.c, td.b
-      text-align: center
-      border-left: 1px solid $silver
-    td.c
-      color: transparent
-      background: url('/assets/img/ic_checkmark_fgreen.png') no-repeat center center / 24px 24px
-    .exp
-      display: inline-block
-      position: relative
-      top: 2px
-      left: 4px
-      width: 16px
-      height: 16px
-      cursor: pointer
-      color: transparent
-      background: url('/assets/img/ic_explanation.png') no-repeat center center / 16px 16px
-      border: none
+  .ribbon::before, .ribbon::after
+    content: ''
+    display: block
+    position: absolute
+    width: 24px
+    height: 48px
+  .ribbon::before
+    top: 0
+    left: -24px
+    @include svg((viewBox: 0 0 24 48))
+      @include svg('path', (fill: $dTertiary, stroke: none, d: 'M 0,4 16.6667,24 0,44 l 23.9998,0 0,-40 z'))
+  .ribbon::after
+    top: 0
+    right: -24px
+    @include svg((viewBox: 0 0 24 48))
+      @include svg('path', (fill: $dTertiary, stroke: none, d: 'M 23.9998,4 7.3331,24 23.9998,44 0,44 0,4 Z'))
+  .explanation p
+    font-size: 13px
+    color: $gray
+    margin: 0
+
+@media(min-width: 992px)
+  .sec-pricing
+    .prices [class^="col-"]
+      padding-left: 0
+      padding-right: 0
+      max-width: 310px
+    .price-box
+      min-height: 412px
+
+.sec-wyg
+  min-height: 60vh
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/bg_cover_00.jpg') no-repeat center center
+  background-size: cover
+  color: $white
+  h3
+    font-family: $textFont
+    font-size: 28px
+    padding-left: 24px
+    margin: 24px 0 40px
+    color: $white
+  ul
+    list-style: none
+    padding: 0 8px 0 24px
+    li
+      background: no-repeat 0 0 / 24px 24px
+      @include svg((viewBox: 0 0 24 24))
+        @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'm 3.217858,14.01096 6.0658,5.41585 11.2649,-16.24755'))
+      margin: 16px 0
+      padding: 0 0 4px 32px
+      font-size: 18px
+      line-height: 1.2
 
 .sec-faq
-  background: white
+  background: $lightGray
   padding-bottom: 48px
   .q, .a
     width: 100%
     text-align: left
+    padding: 0 8px 0 48px
   .q
     cursor: pointer
     font-size: 20px
-    font-weight: 600
+    font-weight: 500
     margin-bottom: 24px
   .q:before
     content: ''
     display: inline-block
     width: 24px
     height: 24px
-    margin: 2px 16px 0 -40px
+    margin: 4px 12px 0 -38px
     vertical-align: top
-    background: url('/assets/img/ic_faq_plus.png') no-repeat center center / 24px 24px
+    background: no-repeat 0 0 / 20px 20px
+    @include svg((viewBox: 0 0 20 20))
+      @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'M 20,10 0,10'))
+      @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'm 10,0 0,20'))
   .q.open:before
-    background: url('/assets/img/ic_faq_minus.png') no-repeat center center / 24px 24px
+    background: no-repeat 0 0 / 20px 20px
+    @include svg((viewBox: 0 0 20 20))
+      @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'M 20,10 0,10'))
   .a
     display: none
     font-size: 14px
     color: $darkGray
   hr
-    border-top: 1px solid $lightSilver
+    border-top: 1px solid $chrome
     margin: 24px 0
 
-footer
-  position: absolute
-  padding: 48px 0
-  color: $silver
-  background: $lightGray
-  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1)
-  a
+@media(max-width: 575px)
+  .sec-faq
+    .q
+      font-size: 18px
+
+.sec-signup
+  .row.req-error
+    display: none
+  .form-control
+    font-size: 15px
+    color: $darkGray
+  .form-check-label
+    font-size: 15px
+    color: $darkGray
+  input[type="checkbox"]
+    margin-right: 4px
+  .btn
+    font-size: 16px
+    padding: 16px 0
+    margin-top: 32px
+  .with-errors ul li
+    font-size: 12px
+    color: $tertiary
+    margin-top: 4px
+  .card
+    padding: 12px 16px
+  .chosen, .price, .discount
     font-size: 13px
     color: $gray
+  .package
+    font-weight: 600
+    font-size: 24px
+    color: $primary
+    text-transform: uppercase
+    margin: 8px 0
+  hr
+    margin: 16px 0
+    border-top: 1px solid $chrome
+  .card ul
+    text-align: left
+    list-style: none
+    li
+      background: no-repeat 0 0 / 20px 20px
+      @include svg((viewBox: 0 0 24 24))
+        @include svg('path', (fill: none, stroke: $primary, stroke-width: 3, d: 'm 3.217858,14.01096 6.0658,5.41585 11.2649,-16.24755'))
+      margin: 4px 0
+      padding: 0 0 4px 32px
+      font-size: 17px
+  .disclaimer
+    font-size: 13px
+    color: $gray
+
+#btn-submit
+  position: relative
+  height: 55px
+
+.sec-cta
+  background: $lightAsh
+  h2
+    font-size: 48px
+  p
+    font-size: 20px
+    margin: 20px 0 32px
+
+@media(max-width: 767px)
+  .sec-cta
+    h2
+      font-size: 36px
+    p
+      font-size: 18px
+    img
+      width: 225px
+      height: 360px
+
+footer
+  padding: 48px 0 96px
+  a, span
+    display: block
+    font-size: 13px
+  span
+    color: $silver
+  div.rating
+    margin-bottom: 4px
+    font-size: 14px
+    font-weight: 500
+    color: $gray
+  span.rating
+    display: inline-block
+    margin-left: 4px
+    font-size: 15px
+    color: $darkGray
+  a
+    color: $gray
   a:hover
-    color: $red
+    color: $tertiary
+  #stars
+    vertical-align: middle
+  .social
+    a
+      margin: 8px 4px
+      display: inline-block
+      opacity: 0.75
+    a:hover
+      opacity: 1
+
+.cover-page
+  width: 100%
+  height: 80vh
+  color: $white
+
+.spinner
+  position: absolute
+  top: 18px
+  left: calc(50% - 35px)
+  width: 70px
+  text-align: center
+  opacity: 0.0
+
+.spinner > div
+  width: 16px
+  height: 16px
+  background-color: $white
+  border-radius: 100%
+  display: inline-block
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both
+
+.spinner .bounce1
+  -webkit-animation-delay: -0.32s
+  animation-delay: -0.32s
+
+.spinner .bounce2
+  -webkit-animation-delay: -0.16s
+  animation-delay: -0.16s
+
+@-webkit-keyframes sk-bouncedelay
+  0%, 80%, 100%
+    -webkit-transform: scale(0)
+  40%
+    -webkit-transform: scale(1.0)
+
+@keyframes sk-bouncedelay
+  0%, 80%, 100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+  40%
+    -webkit-transform: scale(1.0)
+    transform: scale(1.0)
+
+
+      

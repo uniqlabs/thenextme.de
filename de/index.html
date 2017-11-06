@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <title>TheNextMe - Erneuere Dein Leben!</title>
+    <title>TheNextMe - Erreiche ein Lebensziel.</title>
+    <link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
     <link href="/assets/css/main.css" rel="stylesheet">
     <link href="/assets/css/vendor/slick.css" rel="stylesheet"></link><link href="/assets/css/vendor/slick-theme.css" rel="stylesheet"></link>
@@ -31,34 +32,8 @@
 </noscript>
 
 
-<script>
-    function readCookie(name) {
-        var nameEQ = encodeURIComponent(name) + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
-        }
-        return null;
-    }
-    function createCookie(name, value, days) {
-        var expires;
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toGMTString();
-        } else {
-            expires = "";
-        }
-        document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
-    }
-    var variant = readCookie('variant');
-    if (!variant) {
-        variant = Math.random() < 0.5 ? 'a' : 'b';
-        createCookie('variant', variant, 7);
-    }
-</script>
+<a href="/de/pakete/" class="hidden-md-up btn btn-primary btn-cta-fixed">
+    Gratiswoche starten</a>
 
 <nav class="mobile-nav">
     <div class="container">
@@ -70,492 +45,612 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <a href="#programm">Programm</a>
+                <a href="#">Ziele</a>
                 <hr>
-                <a href="#vorteile">Vorteile</a>
+                <a href="/de/pakete/">Preis</a>
                 <hr>
-                <a href="#nutzerstimmen">Nutzerstimmen</a>
+                <a href="#">Erfolge</a>
                 <hr>
-                <a href="#pakete-preise">Jetzt anmelden</a>
+                <a href="#">So geht's</a>
             </div>
         </div>
     </div>
 </nav>
 
 <nav id="navbar" class="navbar navbar-toggleable-md fixed-top">
-    <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button"
-                aria-expanded="false" aria-label="Menü aufklappen">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <img id="logo"
-                 src="/assets/img/ic_tnm_logo.png" width="200" height="48" alt="TheNextMe">
-            <img id="logo-white"
-                 src="/assets/img/ic_tnm_logo_white.png" width="200" height="48" alt="TheNextMe">
-        </a>
-        <div id="nbc" class="collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav">
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#programm">
-                        Programm</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#vorteile">
-                        Vorteile</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#nutzerstimmen">
-                        Nutzerstimmen</a>
-                </li>
-                <li class="nav-item mx-2 ml-xl-4">
-                    <a class="nav-link signup" href="#pakete-preise">
-                        Jetzt anmelden</a>
-                </li>
-            </ul>
-        </div>
+    <button class="navbar-toggler navbar-toggler-right" type="button"
+            aria-expanded="false" aria-label="Menü aufklappen">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img id="logo"
+             src="/assets/img/ic_tnm_logo.png" width="200" height="48" alt="TheNextMe">
+        <img id="logo-white"
+             src="/assets/img/ic_tnm_logo_white.png" width="200" height="48" alt="TheNextMe">
+    </a>
+    <div id="nbc" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="#">
+                    Ziele</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="/de/pakete/">
+                    Preis</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="#">
+                    Erfolge</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a class="nav-link" href="#">
+                    So geht's</a>
+            </li>
+            <li class="nav-item mx-2 ml-xl-4">
+                <a class="nav-link signup" href="/de/pakete/">
+                    Gratiswoche starten</a>
+            </li>
+        </ul>
     </div>
 </nav>
 
-<section class="sec-welcome"
-         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3),
-         rgba(0, 0, 0, 0.7)), url('/assets/img/bg_cover_00.jpg') no-repeat center center;
-         background-size: cover">
-    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
-        <div class="claim">
-            <h1>Erneuere Dein Leben.</h1>
-            <h2>Erreiche ein persönliches Lebensziel.</h2>
-        </div>
-        <div class="ticks">
-            <ul>
-                <li>13-Wochen-Programm</li>
-                <li>persönlicher Coach</li>
-                <li>Geld-zurück-Garantie</li>
-            </ul>
-        </div>
-        <div class="text-center">
-            <a href="#programm" class="btn btn-green">Mehr erfahren</a>
-        </div>
-    </div>
-</section>
-
-<section id="programm" class="sec-program">
-    <div class="container">
-        <div class="backdrop p-5">
-            <div class="row">
-                <div class="col-12 col-md-7 content">
-                    <h2 class="mb-4">Dein Ziel.<br>Unser Coach an Deiner Seite.</h2>
-                    <p><i>TheNextMe</i> ist das erste Programm zur digitalen kognitiven Zielerreichung.
+<section class="sec-welcome">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="hidden-sm-down col-md-2 h-100 d-flex flex-column justify-content-center">
+                <div class="endorsements d-flex flex-column justify-content-around align-items-center">
+                    <p>Unterstützt von:
 </p>
-                    <p>Egal, ob Du gern einen erfüllteren Job hättest, in einer Beziehung wärst oder Dich gesünder fühlen möchtest: Wir helfen Dir, Dein Lebensziel konkret zu machen, einen Aktionsplan zu schmieden und stellen Dir einen persönlichen Coach zur Seite, der Dich für 13 Wochen begleitet.
-</p>
+                    <img src="/assets/img/ic_icf.png" width="100" height="46"
+                         alt="International Coach Federation">
+                    <img src="/assets/img/ic_dvct.png" width="76" height="79"
+                         alt="Deutscher Verband für Coaching und Training">
                 </div>
             </div>
-            <div id="notebook" class="rellax" data-rellax-speed="1"></div>
-            <div id="phone" class="d-flex justify-content-center align-items-center rellax"
-                 data-rellax-speed="-1">
-                <div class="screen"></div>
+            <div id="claim"
+                 class="col-12 text-center col-md-5 text-md-left d-flex flex-column justify-content-center pb-5">
+                <div class="claim">
+                    <h1>Erreiche ein<br>Lebensziel</h1>
+                    <h2>Mit persönlichem Coach.<br>Neue Ergebnisse durch Umdenken.<br>Jederzeit kündbar.</h2>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+            </div>
+            <div id="mob-end" class="hidden-md-up col-12">
+                <div class="endorsements d-flex justify-content-around align-items-center">
+                    <span>Unterstützt von:
+</span>
+                    <img src="/assets/img/ic_icf.png" width="100" height="46"
+                         alt="International Coach Federation">
+                    <img src="/assets/img/ic_eca.png" width="110" height="73"
+                         alt="European Coaching Association">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
-<section id="vorteile" class="sec-advantages">
-    <div class="container">
+<section class="sec-features">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-8 mx-md-auto text-center">
-                <h2 class="mb-5">Deine Vorteile bei <i>TheNextMe:</i></h2>
+            <div id="feat1" class="col feature-box text-center active">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#fff" fill="none" stroke-width="1.5" stroke-linecap="round"
+                          d="m 50.9294,53.02696 0,-3.30227 c 0,-9.68018 -2.69637,-17.47418 -12.37657,-17.47418 l -2.88229,0 c 4.36959,-1.55234 7.29048,-5.6853 7.2952,-10.32244 -3.3e-4,-6.05608 -4.90967,-10.96541 -10.96575,-10.96573 -6.05607,3.2e-4 -10.96541,4.90966 -10.96574,10.96573 0.006,4.63944 2.93098,8.77308 7.30408,10.32244 l -2.89122,0 c -9.6802,0 -12.37653,7.794 -12.37653,17.47418 l 0,3.30227"></path>
+                    <p class="hidden-sm-down">Dein individuelles Ziel</p>
+                </svg>
+            </div>
+            <div id="feat2" class="col feature-box text-center">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#fff" fill="none" stroke-width="1.5" stroke-linecap="round"
+                          d="m 30.10705,18.06697 c -0.74597,0 -1.34651,1.04623 -1.34651,2.34585 l 0,0.8298 c -0.97704,0.20925 -1.9087,0.59181 -2.75087,1.12952 l -0.57989,-0.57989 c -0.91901,-0.91901 -2.08409,-1.2336 -2.61154,-0.70616 l -0.60622,0.60623 c -0.52743,0.52746 -0.21155,1.69248 0.70746,2.61149 l 0.58519,0.58522 c -0.54131,0.83973 -0.92788,1.76959 -1.14142,2.74559 l -0.82447,0 c -1.29959,0 -2.3459,0.60056 -2.3459,1.34652 l 0,0.85731 c 0,0.74599 1.04631,1.34655 2.3459,1.34655 l 0.82975,0 c 0.2091,0.97753 0.59166,1.90969 1.12954,2.7523 l -0.57859,0.57859 c -0.91901,0.91891 -1.23489,2.08401 -0.70746,2.6115 l 0.60622,0.60623 c 0.52745,0.52748 1.69252,0.21278 2.61154,-0.70616 l 0.58516,-0.58645 c 0.83972,0.5413 1.7696,0.92786 2.7456,1.14137 l 0,0.82444 c 0,1.2996 0.60054,2.34595 1.34651,2.34595 l 0.85747,0 c 0.74595,0 1.34649,-1.04635 1.34649,-2.34595 l 0,-0.82968 c 0.97752,-0.20916 1.90966,-0.59175 2.75224,-1.12967 l 0.57988,0.57999 c 0.91892,0.91894 2.0827,1.23364 2.61018,0.70616 l 0.60622,-0.60623 C 39.387,36.5999 39.07236,35.4348 38.15336,34.51589 l -0.58508,-0.58518 c 0.54084,-0.83986 0.92693,-1.76977 1.14002,-2.74571 l 0.82444,0 c 1.29966,0 2.34594,-0.60056 2.34594,-1.34655 l 0,-0.85731 c 0,-0.74596 -1.04628,-1.34652 -2.34594,-1.34652 l -0.82971,0 c -0.20909,-0.9775 -0.59164,-1.90963 -1.1295,-2.75221 l 0.57983,-0.57986 c 0.91899,-0.91902 1.23364,-2.08277 0.70617,-2.61023 l -0.60622,-0.60623 c -0.52748,-0.52744 -1.69126,-0.21285 -2.61018,0.70616 l -0.5865,0.58645 C 34.2169,21.83737 33.28702,21.4508 32.31101,21.23727 l 0,-0.82445 c 0,-1.29962 -0.60054,-2.34585 -1.34649,-2.34585 z m 0.42874,7.67015 c 2.02836,6e-5 3.67265,1.64438 3.67268,3.67274 -5e-5,2.02834 -1.64433,3.67264 -3.67268,3.6727 -2.02836,-5e-5 -3.67265,-1.64434 -3.6727,-3.6727 2e-5,-2.02837 1.64433,-3.67269 3.6727,-3.67274 z m -10.45764,27.92681 0,-8.8331 c -1.80629,-3.12854 -8.50693,-8.04075 -8.50693,-17.26669 0,-7.17476 3.60754,-16.6018 18.10542,-16.6018 15.69603,0 17.83971,7.81418 17.83971,14.68474 2.05893,4.95323 4.91249,11.8619 4.91249,11.8619 l -5.27194,0 0,5.4048 c 0,2.03689 -1.21122,5.51157 -4.438,5.51157 l -4.78791,0 0,5.23858"></path>
+                    <p class="hidden-sm-down">Bewiesene Methode</p>
+                </svg>
+            </div>
+            <div id="feat3" class="col feature-box text-center">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#fff" fill="none" stroke-width="1.5" stroke-linecap="round"
+                          d="m 33.67985,37.64258 9.8995,9.8995 m 0,-9.8995 -9.8995,9.8995 M 46.5069,34.71507 c 4.35048,4.3505 4.35048,11.40405 0,15.75454 -4.3505,4.35051 -11.40405,4.35051 -15.75455,10e-6 -4.35053,-4.35048 -4.35056,-11.40405 -7e-5,-15.75457 4.35052,-4.35052 11.40411,-4.35052 15.75462,2e-5 z m -27.40844,0.84787 6.65375,0 m -6.65375,-6.87287 13.31773,0 m -13.31773,-6.87285 16.6107,0 m -11.27192,22.61856 -10.20228,0 0,-29.49166 0,0 26.33769,0 0,13.13205"></path>
+                    <p class="hidden-sm-down">Jederzeit kündbar</p>
+                </svg>
+            </div>
+            <div id="feat4" class="col feature-box text-center">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke="#fff" fill="none" stroke-width="1.5" stroke-linecap="round"
+                          d="m 25.6579,26.09567 c -4.6175,7.3496 -8.3711,10.73017 -10.9487,10.85799 -1.4736,0.0731 -4.9457,-1.34793 -5.3257,-2.77357 -0.3808,-1.42129 2.4398,-4.06426 4.1084,-5.75967 1.0101,-1.0261 2.0596,0.77108 4.482,0.47931 1.0582,-0.12748 5.7885,-9.59624 5.6808,-10.15261 -0.1124,-0.57924 -2.2397,-1.2328 -2.6407,-2.72928 -0.4009,-1.49638 1.6639,-6.96026 2.6195,-7.04086 2.9277,0.13277 4.5793,1.3464 5.1152,3.13687 1.4461,4.83179 1.5269,6.63228 -3.0908,13.98182 z m 10.7739,20.52038 a 1.8256013,1.8256013 0 0 1 -1.8256,1.82561 1.8256013,1.8256013 0 0 1 -1.8256,-1.82561 1.8256013,1.8256013 0 0 1 1.8256,-1.8256 1.8256013,1.8256013 0 0 1 1.8256,1.8256 z m -5.3243,-26.77546 12.7937,0 c 1.5257,0 2.754,1.22825 2.754,2.75392 l 0,26.50106 c 0,1.52567 -1.2283,2.75391 -2.754,2.75391 l -18.5901,0 c -1.5256,0 -2.7538,-1.22824 -2.7538,-2.75391 l 0,-15.43158"></path>
+                    <p class="hidden-sm-down">Überall nutzbar</p>
+                </svg>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_coach.png" width="96" height="96">
-                <h4>persönlicher Coach</h4>
-                <p>Dein persönlicher Coach steht Dir ab Beginn des Programms zur Verfügung, spricht am Telefon mit Dir und begleitet Dich per Chat.
+        <div id="feature-rows">
+            <div id="slide1" class="row p-md-5p">
+                
+                <div class="hidden-md-up col-12 flex-first feature-heading">
+                    <h3>Dein individuelles Ziel</h3>
+                </div>
+                <div class="col-md-7 feature-details pr-md-10p">
+                    <p>Du willst beruflich durchstarten, regelmäßig Sport machen oder eine glückliche Beziehung? <i>TheNextMe</i> begleitet Dich auf dem Weg zu Deinem nächsten Lebensziel.
 </p>
+                    <ul class="pr-md-5">
+                        
+                        <li>Maximale Erfolgswahrscheinlichkeit durch individuelle Begleitung</li>
+                        
+                        <li>Dein Ziel wird messbar und konkret</li>
+                        
+                        <li>Maßgeschneideter Aktionsplan</li>
+                        
+                    </ul>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+                <div class="col-md-5 flex-first flex-md-unordered goal-cats">
+                    <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+                        <svg viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+                            <g id="cat1">
+                                <circle r="48" cx="225.00002" cy="53.985653" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 213.21459,33.53149 a 14.222764,14.208999 0 0 0 -14.2148,14.201 14.222764,14.208999 0 0 0 1.805,6.8983 c 5.8438,12.187 24.1904,23.6742 24.1904,23.6742 0,0 18.2635,-11.4309 24.155,-23.5841 a 14.222764,14.208999 0 0 0 1.8496,-6.9884 c 0,0 0,0 0,0 a 14.222764,14.208999 0 0 0 -14.2234,-14.201 14.222764,14.208999 0 0 0 -11.7812,6.2617 14.222764,14.208999 0 0 0 -11.7806,-6.2617 z"></path>
+                            </g>
+                            <g id="cat2">
+                                <circle r="48" cy="95.23938" cx="338.34363" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 362.38787,119.89414 -10.452,0 c 0,0 -5.1506,-8.2354 -7.0682,-8.395 -4.2046,-0.35 -13.1707,0.7724 -19.5524,-1.4003 -6.3943,-2.1766 -14.0863,-6.371 -14.9274,-12.2521 1.4019,-3.5707 4.2051,-10.9222 8.0595,-14.6329 5.8292,-5.6121 11.1428,-9.2417 11.7732,-10.4318 0.631,-1.1903 1.9626,-3.1507 2.4531,-3.5705 0.4907,-0.4203 5.4459,-2.942 8.3396,-2.5905 5.1859,0.6301 6.3072,5.3208 5.8167,7.9814 -0.4907,2.6603 -2.7331,4.691 -5.6064,3.9205 -1.8476,-0.4952 -4.4851,-1.2602 -5.3261,-0.4899 -0.4907,0.9801 -2.8868,8.5724 -5.4666,13.9325 3.9908,-0.2532 6.5135,0.6546 8.9704,2.3105 3.1617,-2.7634 7.1365,-3.527 11.9837,-3.2908 9.0917,0.4437 11.0029,4.6209 11.0029,4.6209"></path>
+                            </g>
+                            <g id="cat3">
+                                <circle r="48" cy="199.69742" cx="398.65253" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 405.09256,208.94126 c -4.60436,4.60436 -13.58285,2.76261 -13.58285,-9.55403 0,-12.31665 9.43893,-13.35263 14.15839,-8.63317 m -17.26633,6.4461 13.46774,0 m -13.46774,4.48226 12.08643,0 m 20.8104,-1.98501 a 22.646069,22.646069 0 0 1 -22.64607,22.64607 22.646069,22.646069 0 0 1 -22.64607,-22.64607 22.646069,22.646069 0 0 1 22.64607,-22.64606 22.646069,22.646069 0 0 1 22.64607,22.64606 z"></path>
+                            </g>
+                            <g id="cat4">
+                                <circle r="48" cy="318.48267" cx="377.70746" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 395.08274,310.10359 0,-10.42897 c 0,-3.85487 -3.10341,-6.95829 -6.95829,-6.95829 l -20.52515,0 c -3.85487,0 -6.95829,3.10342 -6.95829,6.95829 l 0,10.56246 m -2.3915,-0.49823 a 5.6541396,5.6541396 0 0 0 -5.56889,5.73245 l 0,14.94311 a 5.6541396,5.6541396 0 0 0 5.65349,5.65349 l 2.32006,0 0,8.18037 1.9572,0 2.1922,-8.18037 25.94928,0 2.19221,8.18037 1.95719,0 0,-8.18037 2.17905,0 a 5.6541396,5.6541396 0 0 0 5.65349,-5.65349 l 0,-14.94311 a 5.6541396,5.6541396 0 1 0 -11.30697,0 l 0,9.28963 -27.44021,0 0,-9.28963 a 5.6541396,5.6541396 0 0 0 -5.7381,-5.73245 z"></path>
+                            </g>
+                            <g id="cat5">
+                                <circle r="48" cx="285.30884" cy="396.01428" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 284.01709,389.12421 c 0,4.70269 -3.81229,8.20562 -8.51498,8.20562 -4.7027,0 -8.51499,-3.50292 -8.51499,-8.20562 0,-4.7027 3.81229,-8.51499 8.51499,-8.51499 4.7027,0 8.51498,3.81229 8.51498,8.51499 z m 9.02715,6.06671 -11.28115,0 0,0.002 c -1.79011,1.38987 -3.99051,2.14566 -6.25687,2.14738 -2.26281,0 -4.46081,-0.76158 -6.24795,-2.14962 l -0.002,4.8e-4 0,0.002 -2.26121,0 c -1.10667,-0.0274 -2.16933,0.4354 -2.90421,1.26344 l -9.79937,10.73915 c -0.97969,1.07386 -1.25295,2.61745 -0.70094,3.96217 l 0.9286,2.259 8.12527,0 -1.1942,-2.91304 3.65187,-4.00235 c 0,0.7222 0.16675,1.47162 0,2.20319 l 0,4.7122 20.75902,0 m 23.26534,-24.29271 a 8.5149851,8.5149851 0 0 1 -8.51499,8.51498 8.5149851,8.5149851 0 0 1 -8.51498,-8.51498 8.5149851,8.5149851 0 0 1 8.51498,-8.51499 8.5149851,8.5149851 0 0 1 8.51499,8.51499 z m -14.76223,6.06997 c -6.57254,0.60128 -8.45088,6.39962 -8.45088,13.5132 l 0,4.71203 29.3955,0 0,-4.71203 c 0,-7.10958 -1.87582,-12.90529 -8.43933,-13.51217 -1.79023,1.38976 -3.99166,2.14498 -6.2579,2.14681 -2.26293,0 -4.46025,-0.75991 -6.24739,-2.14784 z"></path>
+                            </g>
+                            <g id="cat6">
+                                <circle r="48" cx="164.6911" cy="396.01428" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 144.42841,398.83983 0,19.87466 14.70313,0 0,-13.74805 11.11718,0 0,13.74805 14.70313,0 0,-19.87466 M 164.67841,373.3141 a 3.7217109,3.7217109 0 0 0 -2.375,0.86719 l -23.23828,19.44336 a 3.7217109,3.7217109 0 1 0 4.77539,5.70703 l 20.84961,-17.44336 20.85156,17.44336 a 3.7217109,3.7217109 0 1 0 4.77539,-5.70703 l -7.47265,-6.25196 0,-12.77734 -7.48633,0 0,6.51367 -8.2793,-6.92773 a 3.7217109,3.7217109 0 0 0 -2.40039,-0.86719 z"></path>
+                            </g>
+                            <g id="cat7">
+                                <circle r="48" cy="318.48267" cx="72.292542" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 72.51129,333.11243 c 0,0 3.90553,-2.73017 11.56343,-2.73017 7.65789,0 11.94631,2.49616 11.94631,2.49616 l 0,-31.82603 c 0,0 -4.365,-2.18415 -11.10395,-2.18415 -7.96421,0 -12.40579,2.49617 -12.40579,2.49617 m -23.947265,31.50823 0,-31.81515 c 0,0 4.444755,-2.1834 11.306855,-2.1834 8.10975,0 12.63248,2.49531 12.63248,2.49531 l 0,31.73719 c 0,0 -3.97689,-2.72924 -11.77471,-2.72924 -7.79784,0 -12.164625,2.49529 -12.164625,2.49529 z m -3.64856,-30.64547 0,34.07652 23.159545,0 c 0,0 1.63755,1.79351 4.36226,1.79351 2.72471,0 4.07278,-1.79351 4.07278,-1.79351 l 23.15955,0 0,-34.07652"></path>
+                            </g>
+                            <g id="cat8">
+                                <circle r="48" cx="51.347469" cy="199.69742" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 59.16728,202.16122 a 6.9366288,6.9366288 0 0 1 -6.93662,6.93663 6.9366288,6.9366288 0 0 1 -6.936625,-6.93663 6.9366288,6.9366288 0 0 1 6.936625,-6.93663 6.9366288,6.9366288 0 0 1 6.93662,6.93663 z m -12.013605,4.75064 c -4.46924,1.00477 -6.8958,5.45434 -6.8958,10.83231 l 0,2.08894 23.946225,0 0,-2.08894 c 0,-5.3766 -2.25014,-9.82609 -6.71677,-10.83231 -1.68766,1.54951 -2.96642,2.41071 -5.25753,2.41388 -2.28951,-0.004 -3.389635,-0.86545 -5.076125,-2.41388 z M 73.36016,193.86825 a 8.2457943,8.2457943 0 0 1 -8.24579,8.2458 8.2457943,8.2457943 0 0 1 -8.2458,-8.2458 8.2457943,8.2457943 0 0 1 8.2458,-8.24579 8.2457943,8.2457943 0 0 1 8.24579,8.24579 z m -9.24313,21.38133 15.23046,0 0,-2.48383 c 0,-6.88461 -1.81679,-12.49636 -8.17258,-13.08425 l 0,0.003 M 50.50296,189.52298 a 9.9612522,9.9612522 0 0 1 -9.961245,9.96125 9.9612522,9.9612522 0 0 1 -9.96126,-9.96125 9.9612522,9.9612522 0 0 1 9.96126,-9.96126 9.9612522,9.9612522 0 0 1 9.961245,9.96126 z m -17.269495,7.44344 0,-0.003 c -7.68867,0.70364 -9.88597,7.48581 -9.88597,15.80753 l 0,3.00065 16.91212,0"></path>
+                            </g>
+                            <g id="cat9">
+                                <circle r="48" cy="95.239349" cx="111.65637" fill="#f6f6f6"
+                                        stroke="none"></circle>
+                                <path stroke="#333" fill="none" stroke-width="1.5"
+                                      stroke-linecap="round"
+                                      d="m 136.65564,115.50856 c 0,-12.78461 -3.56109,-23.07618 -16.3457,-23.07618 l -3.87305,0.0937 -2.74013,4.4961 4.24804,15.85156 -6.28721,5.28906 -6.28886,-5.28906 4.24609,-15.85156 -2.73848,-4.4961 -3.87304,-0.0937 C 90.22242,92.12301 86.65563,102.72395 86.65563,115.50856 M 126.13948,78.79908 A 14.483173,14.483173 0 0 1 111.65631,93.28226 14.483173,14.483173 0 0 1 97.17313,78.79908 14.483173,14.483173 0 0 1 111.65631,64.31591 14.483173,14.483173 0 0 1 126.13948,78.79908 Z"></path>
+                            </g>
+                        </svg>
+                        <span id="active-cat"></span>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_method.png" width="96" height="96">
-                <h4>bewiesene Methode</h4>
-                <p>Unsere Coaches lösen mentale Barrieren mit einer bewiesenen, wissenschaftlich fundierten Methode im Gespräch mit Dir auf.
+            <div id="slide2" class="row p-md-5p">
+                
+                <div class="hidden-md-up col-12 flex-first feature-heading">
+                    <h3>Bewiesene Methode</h3>
+                </div>
+                <div class="col-md-7 feature-details pr-md-10p">
+                    <p>Unsere Coaches lösen mentale Barrieren mit einer bewiesenen, wissenschaftlich fundierten Methode im Gespräch mit Dir auf.
 </p>
+                    <ul class="pr-md-5">
+                        
+                        <li>Wissenschaftliche Methode zur <i>kognitiven Zielerreichung</i></li>
+                        
+                        <li>Neue Ergebnisse durch ein neues Mindset</li>
+                        
+                        <li>Fokus auf Lösungen, nicht auf Probleme</li>
+                        
+                    </ul>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+                <div class="col-md-5 flex-first flex-md-unordered">
+                    <div class="h-100 d-flex justify-content-center align-items-center">
+                        <div class="phone">
+                            <div class="screen screen01"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_plan.png" width="96" height="96">
-                <h4>digitaler Aktionsplan</h4>
-                <p>Unsere App unterstützt Dich bei der Erstellung Deines persönlichen Aktionsplans und beim Tracking Deines Fortschritts.
+            <div id="slide3" class="row p-md-5p">
+                
+                <div class="hidden-md-up col-12 flex-first feature-heading">
+                    <h3>Jederzeit kündbar</h3>
+                </div>
+                <div class="col-md-7 feature-details pr-md-10p">
+                    <p>Probiere unser Programm ohne Risiko aus, bevor Du zahlst. Während Deiner Gratiswoche kannst Du mit einem Coach chatten und sogar ein erstes Coaching-Gespräch führen.
 </p>
+                    <ul class="pr-md-5">
+                        
+                        <li>Du kannst jederzeit in der App kündigen.</li>
+                        
+                        <li>Teste uns eine Woche kostenlos. Dir wird nichts in Rechnung gestellt, bis die Woche endet.</li>
+                        
+                    </ul>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+                <div class="col-md-5 flex-first flex-md-unordered">
+                    <div class="h-100 d-flex justify-content-center align-items-center">
+                        <div class="phone">
+                            <div class="screen screen02"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_privacy.png" width="96" height="96">
-                <h4>vertraulich</h4>
-                <p>Wir behandeln alle Informationen absolut vertraulich und schützen Deine Daten. Du kannst unser Programm sogar anonym nutzen.
+            <div id="slide4" class="row p-md-5p">
+                
+                <div class="hidden-md-up col-12 flex-first feature-heading">
+                    <h3>Überall nutzbar</h3>
+                </div>
+                <div class="col-md-7 feature-details pr-md-10p">
+                    <p>Mit unserer App hast Du überall Zugriff auf die Trainingsinhalte, den Chat mit Deinem Coach und den Zugang für Coaching-Gespräche.
 </p>
-            </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_time.png" width="96" height="96">
-                <h4>rund um die Uhr</h4>
-                <p>Dein Coach steht Dir nicht nur während der gebuchten Gespräche zur Verfügung, sondern auch jederzeit per Chat in der App.
-</p>
-            </div>
-            <div class="col-12 col-md-4 text-center">
-                <img src="/assets/img/ic_money.png" width="96" height="96">
-                <h4>Geld zurück</h4>
-                <p>Falls <i>TheNextMe</i> nicht für Dich funktioniert, kannst Du jederzeit abbrechen und erhältst Dein Geld zurück.
-</p>
+                    <ul class="pr-md-5">
+                        
+                        <li>Trainingsinhalte in der App</li>
+                        
+                        <li>24/7 Chat mit Deinem Coach</li>
+                        
+                        <li>Coaching-Gespräche am Telefon</li>
+                        
+                    </ul>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+                <div class="col-md-5 flex-first flex-md-unordered">
+                    <div class="h-100 d-flex justify-content-center align-items-center">
+                        <div class="phone">
+                            <div class="screen screen03"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<section id="ankas-erfolgsgeschichte" class="sec-video-testimonial">
+    <div class="container-fluid h-100">
+        <div class="row h-100 d-flex justify-content-center align-items-center">
+            <div class="video-title text-center">
+                <span class="play-button"></span>
+                <h3>Ankas Erfolgsgeschichte</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog"
+     aria-labelledby="modal-video-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close ml-auto" data-dismiss="modal"
+                        aria-label="Schließen">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="cover-video" class="embed-responsive-item"
+                                src="//www.youtube.com/embed/hTvA4Qe3L2Q?autoplay=0&showinfo=0"
+                                frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section id="nutzerstimmen" class="sec-testimonials">
-    <div class="container">
-        <div class="backdrop p-5">
-            <div id="starfish" class="rellax" data-rellax-speed="1"></div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Was unsere Nutzer sagen</h2>
-                    <p><b>9</b> von <b>10</b> unserer Nutzer erreichen ihr Ziel. Lies selbst, was sie sagen.</p>
-                </div>
+    <div class="container-fluid p-md-5p">
+        <div class="row heading">
+            <div class="col-12 text-center text-md-left">
+                <h2>Was unsere Nutzer sagen</h2>
+                <p><b>9</b> von <b>10</b> unserer Nutzer erreichen ihr Ziel. Lies selbst, was sie sagen.</p>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="btn-prev"></div>
-                    <div id="testis">
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/anka38.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Anka, 38</h3>
-                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>Ich bin Modefotografin und hatte eine finanziell schwierige Phase, in der ich von 200€ im Monat lebte. [...] Das Coaching-Gespräch war ein totales Aufwacherlebnis für mich. Seitdem vertrete ich den Wert meiner Arbeit selbstbewusst und verdiene am Tag ein Vielfaches mehr als vorher im Monat.
+        </div>
+        <div class="row px-md-5p">
+            <div class="col-12">
+                <div class="btn-prev"></div>
+                <div id="testis">
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/anka38.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Anka, 38</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Ich bin Modefotografin und hatte eine finanziell schwierige Phase, in der ich von 200€ im Monat lebte. [...] Das Coaching-Gespräch war ein totales Aufwacherlebnis für mich. Seitdem vertrete ich den Wert meiner Arbeit selbstbewusst und verdiene am Tag ein Vielfaches mehr als vorher im Monat.
 </p>
-                            </div>
                         </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/elli34.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Elli, 34</h3>
-                                <img src="/assets/img/ic_rating_4.5.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>Auf der Suche nach meinem Traumjob habe ich viele Bücher gelesen, aber konnte diese schlecht in die Tat umsetzen. [....] Mit meinem Coach habe ich einen sehr konkreten Aktionsplan erstellt, um mich als Organisationsberaterin selbstständig zu machen. Das funktioniert super.
-</p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/melanie56.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Melanie, 56</h3>
-                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>Vor vier Jahren habe ich mich von meinem Mann getrennt und seitdem bin ich Single. [...] Durch die Übungen bei <i>TheNextMe</i> habe ich realisiert, was ich wirklich in einer Beziehung möchte und der Aktionsplan hat mich zurück ins Dating gebracht. Jetzt bin ich frisch verliebt!
-</p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/eckart78.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Eckart, 78</h3>
-                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>Seit längerer Zeit kam ich mit dem Russischlernen nicht voran. Im Coaching-Gespräch habe ich mir ein großes Ziel gesteckt: Meine Tochter einmal durch die russische U-Bahn zu lotsen. Von da ab war ich motiviert und vor einem Monat haben wir gemeinsam Moskau erkundet. Wunderbar!
-</p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/ralf41.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Ralf, 41</h3>
-                                <img src="/assets/img/ic_rating_4.5.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>Ich bewerbe mich gerade auf meine Traumstelle und <i>TheNextMe</i> begleitet mich dabei. Die Gespräche helfen mir, alle persönlichen Zweifel vor Veränderung auszuräumen. Das erleichtert mich sehr. [...] Ich stelle mich nun selbstbewusst und mit positiver Ausstrahlung meiner Bewerbungsrunde.
-</p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/uta41.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Uta, 41</h3>
-                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p><i>TheNextMe</i> hat mich dort abgeholt, wo ich seit Langem auf der Stelle getreten bin: meine Berufung zu finden und zu leben. Das Coaching hat mir geholfen, den Traum meiner Selbstständigkeit konkret zu machen. Vor zwei Wochen habe ich meinen eigenen Online-Shop eröffnet.
-</p>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        <div class="testi">
-                            <img src="/assets/img/testimonials/bianca32.jpg"
-                                 class="rounded-circle" width="120px" height="120px">
-                            <div class="meta">
-                                <h3>Bianca, 32</h3>
-                                <img src="/assets/img/ic_rating_5.0.png" width="128" height="24">
-                            </div>
-                            <div class="review">
-                                <p>In meinem Job war ich viel unterwegs und habe auch oft am Wochenende gearbeitet. Auf der Suche nach geregelteren Arbeitszeiten ergab sich die Möglichkeit intern zu wechseln. <i>TheNextMe</i> hat mich unterstützt, diesen Schritt zu gehen. [...] Ich habe am Ende mein Ziel problemlos erreicht. Danke!</p>
-                            </div>
-                        </div>
-                        
                     </div>
-                    <div class="btn-next"></div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/jörg48.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Jörg, 48</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Als mir ein Freund <i>TheNextMe</i> empfahl, war ich zunächst skeptisch, aber inzwischen bin ich total begeistert. Ich habe in 12 Wochen ein Buch zu Ende geschrieben, was ich lange vor mir hergeschoben hatte. Ich glaube nicht, dass ich ohne das Programm heute so weit wäre.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/elli34.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Elli, 34</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star half"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Auf der Suche nach meinem Traumjob habe ich viele Bücher gelesen, aber konnte diese schlecht in die Tat umsetzen. [....] Mit meinem Coach habe ich einen sehr konkreten Aktionsplan erstellt, um mich als Organisationsberaterin selbstständig zu machen. Das funktioniert super.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/melanie56.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Melanie, 56</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star half"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Vor vier Jahren habe ich mich von meinem Mann getrennt und seitdem bin ich Single. [...] Durch die Übungen bei <i>TheNextMe</i> habe ich realisiert, was ich wirklich in einer Beziehung möchte und der Aktionsplan hat mich zurück ins Dating gebracht. Jetzt bin ich frisch verliebt!
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/eckart78.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Eckart, 78</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Seit längerer Zeit kam ich mit dem Russischlernen nicht voran. Im Coaching-Gespräch habe ich mir ein großes Ziel gesteckt: Meine Tochter einmal durch die russische U-Bahn zu lotsen. Von da ab war ich motiviert und vor einem Monat haben wir gemeinsam Moskau erkundet. Wunderbar!
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/ralf41.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Ralf, 41</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Ich bewerbe mich gerade auf meine Traumstelle und <i>TheNextMe</i> begleitet mich dabei. Die Gespräche helfen mir, alle persönlichen Zweifel vor Veränderung auszuräumen. Das erleichtert mich sehr. [...] Ich stelle mich nun selbstbewusst und mit positiver Ausstrahlung meiner Bewerbungsrunde.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/uta41.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Uta, 41</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p><i>TheNextMe</i> hat mich dort abgeholt, wo ich seit Langem auf der Stelle getreten bin: meine Berufung zu finden und zu leben. Das Coaching hat mir geholfen, den Traum meiner Selbstständigkeit konkret zu machen. Vor zwei Wochen habe ich meinen eigenen Online-Shop eröffnet.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/bianca32.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Bianca, 32</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>In meinem Job war ich viel unterwegs und habe auch oft am Wochenende gearbeitet. Auf der Suche nach geregelteren Arbeitszeiten ergab sich die Möglichkeit intern zu wechseln. <i>TheNextMe</i> hat mich unterstützt, diesen Schritt zu gehen. [...] Ich habe am Ende mein Ziel problemlos erreicht. Danke!
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/martine40.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Martine, 40</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Seit Jahren habe ich die Ergebnisse meiner Forschungsarbeiten an der Universität mit mir rumgeschleppt. <i>TheNextMe</i> hat mir geholfen, die nötige Zielstrebigkeit zu entwickeln und mich begleitet, bis mein Ziel erreicht und die Arbeit eingereicht war. Hierfür bin ich sehr dankbar!
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/anna44.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Anna, 44</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star empty"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Das Programm hat mich unterstützt, dranzubleiben. Ich war sozusagen „gezwungen“, immer weiter zu gehen. [...] Es braucht Zeit, sich eine neue berufliche Position zu erarbeiten. Der Leitspruch aus meinem Coaching-Gespräch hängt nun über meinem Schreibtisch und motiviert mich voranzugehen. Danke!</p>
+                        </div>
+                    </div>
+                    
                 </div>
+                <div class="btn-next"></div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="pakete-preise" class="sec-pricing">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-8 mx-md-auto text-center">
-                <h2 class="mb-4">Wähle Dein Paket</h2>
-                <ul class="ticks">
-                    <li>13-Wochen-Programm</li>
-                    <li>persönlicher Coach</li>
-                    <li>Geld-zurück-Garantie</li>
-                </ul>
-                <p>Du kannst bezahlte Pakete problemlos stornieren und erhältst Dein Geld zurück.
-<br>Du hast noch Fragen? <a href="#haufige-fragen">
-                    Hier findest Du Antworten.</a></p>
+<section id="jetzt-starten" class="sec-cta pt-5 pt-md-2">
+    <div class="container-fluid">
+        <div class="row px-md-5p">
+            <div
+                    class="col-12 col-md-7 d-flex flex-column justify-content-center text-center text-md-left">
+                <h2>Beginne jetzt Dein nächstes Lebenskapitel.</h2>
+                <p>7 Tage kostenlos testen. Jederzeit kündbar.</p>
+                <div>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
             </div>
-        </div>
-        <div class="row hidden-md-down">
-            <div class="col-12 col-md-10 mx-md-auto">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th class="br bb"><i>ohne Coach</i></th>
-                        <th colspan="2" class="bb brush"><i>mit persönlichem Coach</i></th>
-                    </tr>
-                    <tr>
-                        <th class="br">&nbsp;</th>
-                        <th class="br">
-                            <h3>Free</h3>
-                            <div class="before">&nbsp;</div>
-                            <div class="price">&euro;0</div>
-                            <div class="after">&nbsp;</div>
-                            <button class="btn btn-secondary mb-4">Auswählen</button>
-                            <p>Wenn Du unsere App auf eigene Faust nutzen willst.
-</p>
-                        </th>
-                        <th class="br">
-                            <h3>Basic</h3>
-                            <div class="before">
-                                <script>document.write(variant === 'a' ? 'einmalig' : 'monatlich');</script>
-                            </div>
-                            <div class="price">
-                                <script>document.write(variant === 'a' ? '&euro;149' : '&euro;49');</script>
-                            </div>
-                            <div class="after">
-                                <script>document.write(variant === 'a' ? '(für 13 Wochen)' : '(für 3 Monate)');</script>
-                            </div>
-                            <button class="btn btn-action mb-4">Auswählen</button>
-                            <p>Buche einen Coach und erhöhe Deine Erfolgswahrscheinlichkeit um das Zehnfache.
-</p>
-                        </th>
-                        <th>
-                            <h3>Pro</h3>
-                            <div class="before">
-                                <script>document.write(variant === 'a' ? 'einmalig' : 'monatlich');</script>
-                            </div>
-                            <div class="price">
-                                <script>document.write(variant === 'a' ? '&euro;239' : '&euro;79');</script>
-                            </div>
-                            <div class="after">
-                                <script>document.write(variant === 'a' ? '(für 13 Wochen)' : '(für 3 Monate)');</script>
-                            </div>
-                            <button class="btn btn-action mb-4">Auswählen</button>
-                            <p>Buche mehr Coaching-Gespräche und erfahre die bestmögliche Unterstützung.
-</p>
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Online-Module in der App
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Nutze verschiedene Module in unserer App, um Dein Ziel zu finden und konkret zu machen.
-">?</span></td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Aktionsplan
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Erstelle Deinen Aktionsplan mit konkreten messbaren Meilensteinen in der App.
-">?</span></td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Tracking Deines<br>Fortschritts
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Verfolge täglich Deinen Fortschritt, erhalte Erinnerungen und hake Meilensteine ab.
-">?</span></td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Coaching-Gespräch für ein klares Ziel
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Dein Coach schärft im persönlichen Gespräch mit Dir Dein gesteckte Ziel und hilft Dir mentale Barrieren auszuräumen.
-">?</span></td>
-                        <td class="b">&nbsp;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>13 Wochen Chatbegleitung
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Du kannst Dich 24/7 an Deinen Coach wenden, egal, was Dich bewegt. Dein Coach fragt nach und motiviert Dich, auch wenn es mal nicht glatt läuft, per Chat in unserer App.
-">?</span></td>
-                        <td class="b">&nbsp;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Maßgeschneiderte Mindset-Übungen
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Nur mit einem neuen Mindset werden neue Ergebnisse möglich. Dein Coach gibt Dir maßgeschneiderte Übungen, die Dir helfen, Dein neues Mindset im Alltag zu verankern.
-">?</span></td>
-                        <td class="b">&nbsp;</td>
-                        <td class="c">&#x2713;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Coaching-Gespräch für den perfekten Aktionsplan
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Dein Coach hilft Dir, Deinen Aktionsplan zu justieren, Meilensteine zu konkretisieren und die
- Erfolgswahrscheinlichkeit des Plans zu maximieren.
-">?</span></td>
-                        <td class="b">&nbsp;</td>
-                        <td class="b">&nbsp;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td>Coaching-Gespräch für erfolgreiche Umsetzung
-                            <span class="exp" data-toggle="tooltip"
-                                  title="Bei der Umsetzung lauern erfahrungsgemäß die schwierigsten Hürden. Dein Coach hilft Dir, sie erfolgreich zu nehmen.
-">?</span></td>
-                        <td class="b">&nbsp;</td>
-                        <td class="b">&nbsp;</td>
-                        <td class="c">&#x2713;</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="col-12 col-md-5 text-center">
+                <img src="/assets/img/img_happy_girl.jpg" width="300" height="480">
             </div>
         </div>
     </div>
 </section>
-
-<section id="haufige-fragen" class="sec-faq">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mx-sm-auto text-center">
-                <h3 class="mb-4">Häufige Fragen und Antworten</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-10 mx-md-auto pl-md-5">
-                <hr>
-                
-                <div class="q pl-md-5">Für wen ist das <i>Free</i>-Paket geeignet?</div>
-                <div class="a">
-                    <div class="pl-md-5">Wenn Du unsere App zur Zielerreichung einfach ausprobieren möchtest, kannst Du mit dem kostenlosen <i>Free</i>-Paket einsteigen. Bei der Umsetzung Deines Plans bist Du dann auf Dich allein gestellt.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Wann lohnt sich ein bezahltes Paket?</div>
-                <div class="a">
-                    <div class="pl-md-5">Wenn Du Dein Ziel mit möglichst hoher Wahrscheinlichkeit erreichen möchtest, empfiehlt es sich, die Begleitung durch einen persönlichen Coach zu buchen. Im <i>Basic</i>-Paket hast Du dabei ein Coaching-Gespräch zur Ausrichtung auf Dein Ziel, im <i>Pro</i>-Paket erhältst Du mit drei Coaching-Gesprächen die bestmögliche Unterstützung.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Ist mein Coach ein echter Mensch?</div>
-                <div class="a">
-                    <div class="pl-md-5">Ja. Unsere Coaches sind sorgfältig ausgewählt und haben eine Ausbildung in Methoden zur kognitiven Zielerreichung durchlaufen. Sie begleiten Dich persönlich über den Zeitraum von 13 Wochen.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Wie verläuft ein Coaching-Gespräch?</div>
-                <div class="a">
-                    <div class="pl-md-5">Du und Dein Coach wählt Euch auf einer Telefonkonferenznummer ein und sprecht für ca. 30min. Dein Coach stellt Dir Fragen. Du wirst während des Gesprächs eine Menge Erkenntnisse haben.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Was bekomme ich außer Coaching-Gesprächen?</div>
-                <div class="a">
-                    <div class="pl-md-5">In allen bezahlten Paketen steht Dir Dein Coach 13 Wochen per Chat zur Verfügung und Du erhältst auf Dich zugeschnittene Übungen, um das neue Mindset zur Erreichung Deines Ziels im Alltag zu verankern.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Wie funktioniert die Geld-zurück-Garantie?</div>
-                <div class="a">
-                    <div class="pl-md-5">Wenn unser Programm nicht für Dich funktioniert, kannst Du es in den ersten 14 Tagen abbrechen und erhältst den vollen Betrag zurück. Das gilt auch, wenn Du bereits ein Coaching-Gespräch in Anspruch genommen hast. Auch danach kannst Du das Programm abbrechen und erhältst dann den Restbetrag zurück.
-</div>
-                    <hr>
-                </div>
-                
-                <div class="q pl-md-5">Kann ich von einem Paket ins andere wechseln?</div>
-                <div class="a">
-                    <div class="pl-md-5">Ja, Du kannst jederzeit up- oder downgraden. Bei einem Wechsel von einem bezahlten Paket zurück ins <i>Free</i>-Paket gelten die Bedingungen unserer Geld-zurück-Garantie.
-</div>
-                    <hr>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div>&copy; 2017 - TheNextMe &bull; Uniq Coaching GmbH</div>
-                <a href="/de/impressum/">Impressum</a> &bull;
+    <div class="container-fluid">
+        <div class="row px-md-5p">
+            <div class="col-md-3 mb-4">
+                <img src="/assets/img/ic_tnm_logo_gray.png" width="132" height="25" class="mb-2">
+                <span class="mb-2">&copy; 2017 - TheNextMe &bull; Uniq Coaching GmbH</span>
+                <a href="/de/impressum/">Impressum</a>
                 <a href="#">AGB</a>
+            </div>
+            <div class="col-md-3 mb-4">
+                <span>Unterstützt von:</span>
+                <img class="mx-2" src="/assets/img/ic_icf_gray.png" width="100" height="46">
+                <img class="mx-2" src="/assets/img/ic_dvct_gray.png" width="76" height="79">
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="d-flex justify-content-md-center align-items-center">
+                    <img src="/assets/img/ic_rating_seal.png" width="96" height="96" class="mr-2">
+                    <div>
+                        <div class="rating">Ø-Nutzerbewertung:</div>
+                        <img id="stars" src="/assets/img/ic_stars.png" width="96" height="18">
+                        <span class="rating">4.8/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 social">
+                <span>Folge uns auf:</span>
+                <a href="https://www.facebook.com/TheNextMe.DE" target="_blank"><img
+                        src="/assets/img/ic_facebook.png" width="36" height="36" alt="Facebook"></a>
+                <a href="#"><img src="/assets/img/ic_youtube.png" width="36" height="36"
+                                 alt="YouTube"></a>
             </div>
         </div>
     </div>
@@ -566,7 +661,6 @@
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script src="/assets/js/vendor/rellax.min.js"></script>
 <script src="/assets/js/vendor/slick.min.js"></script>
 <script src="/assets/js/main.min.js"></script>
 
