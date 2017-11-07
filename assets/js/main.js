@@ -152,8 +152,7 @@ $(document).ready(function () {
   }
 
   function showExitModal() {
-    console.log('MODAL!');
-    $extModal.modal();
+    $extModal.modal({ backdrop: true, show: true });
   }
 
   function initVideo() {

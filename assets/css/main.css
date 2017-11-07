@@ -235,6 +235,14 @@ section, footer {
     line-height: 1.5;
     margin: 20px 0; }
 
+.sec-welcome.job {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("/assets/img/bg_cover_02.jpg") no-repeat center center;
+  background-size: cover; }
+
+.sec-welcome.freelance {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_09.jpg") no-repeat center center;
+  background-size: cover; }
+
 #claim {
   height: 100%; }
 
