@@ -224,7 +224,8 @@ section, footer {
       font-size: 12px;
       color: #eee; }
     .sec-welcome .endorsements img {
-      display: inline-block; }
+      display: block;
+      margin: 16px 0; }
   .sec-welcome .claim h1 {
     font-size: 54px; }
   .sec-welcome .claim h2 {
@@ -402,7 +403,7 @@ section, footer {
   .sec-video-testimonial {
     height: 40vh; } }
 .modal-backdrop.show {
-  opacity: 0.85; }
+  opacity: 0.6; }
 
 .modal-dialog {
   width: 100%;

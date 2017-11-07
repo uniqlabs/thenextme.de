@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var $document = $(document);
   var $window = $(window);
   var $navbarToggler = $('button.navbar-toggler');
   var $navClose = $('button.nav-close');
@@ -13,6 +14,7 @@ $(document).ready(function () {
   var $testis = $('#testis');
   var $vidModal = $('#modal-video');
   var $vidFrame = $('#cover-video');
+  var $extModal = $('#modal-exit');
   var scrollTop = 0;
   var navbarOn = 0;
   var navbarOff = 0;
@@ -30,6 +32,7 @@ $(document).ready(function () {
     initFeatureSlider();
     updateDimensions();
     initCats();
+    initExitIntent();
     initVideo();
     $window.scroll(handleScroll);
     handleScroll();
@@ -141,6 +144,16 @@ $(document).ready(function () {
   function fnIn(idx) {
     switchCatTimer(false);
     selectCat(idx);
+  }
+
+  function initExitIntent() {
+    $.exitIntent('enable');
+    $document.bind('exitintent', showExitModal);
+  }
+
+  function showExitModal() {
+    console.log('MODAL!');
+    $extModal.modal();
   }
 
   function initVideo() {
