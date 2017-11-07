@@ -52,15 +52,6 @@
 
 <body>
 
-<script>
-    var params = {};
-    location.search.substr(1).split("&").forEach(function (item) {
-        params[item.split("=")[0]] = item.split("=")[1];
-    });
-    if (!params.tk || params.tk.length != 6)
-        window.location = '/de/';
-</script>
-
 
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGDD4D5"
@@ -74,24 +65,42 @@
 </nav>
 
 <section class="cover-page"
-         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/img/bg_cover_12.jpg'); background-size: cover, cover;">
+         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/assets/img/bg_cover_13.jpg'); background-size: cover, cover;">
     <div class="container h-100">
         <div class="row h-100 d-flex justify-content-center align-items-center">
             <div class="col col-md-10 col-xl-8 mx-md-auto text-center">
                 <h1>Danke.</h1>
-                <p>Vielen Dank für Deine Registrierung. Du erhältst in Kürze eine E-Mail mit einem Bestätigungslink und einer Anleitung, wie es weiter geht.
+                <p>Vielen Dank für Dein Interesse. Du erhältst in Kürze unser Whitepaper.
 </p>
             </div>
         </div>
         <div class="row mt-5 pb-5">
             <div class="col-12 col-md-10 col-xl-8 mx-md-auto">
                 
+
             </div>
         </div>
     </div>
 </section>
 
-
+<section id="jetzt-starten" class="sec-cta pt-5 pt-md-2">
+    <div class="container-fluid">
+        <div class="row px-md-5p">
+            <div
+                    class="col-12 col-md-7 d-flex flex-column justify-content-center text-center text-md-left">
+                <h2>Beginne jetzt Dein nächstes Lebenskapitel.</h2>
+                <p>7 Tage kostenlos testen. Jederzeit kündbar.</p>
+                <div>
+                    <a href="/de/pakete/" class="hidden-sm-down btn btn-primary btn-huge">
+                        Gratiswoche starten</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 text-center">
+                <img src="/assets/img/img_happy_girl.jpg" width="300" height="480">
+            </div>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="container-fluid">
         <div class="row px-md-5p">
