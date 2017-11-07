@@ -23,6 +23,31 @@
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MGDD4D5');</script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "rgba(255, 255, 255, 0.95)",
+                        "text": "#333333"
+                    },
+                    "button": {
+                        "background": "#00aad4",
+                        "text": "#ffffff"
+                    }
+                },
+                "theme": "classic",
+                "position": "bottom-right",
+                "content": {
+                    "message": "Unsere Webseite verwendet Cookies, um Dienste und Funktionen bereitzustellen.",
+                    "dismiss": "OK",
+                    "link": "Mehr",
+                    "href": "/de/datenschutz/"
+                }
+            })});
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="64">
@@ -627,8 +652,9 @@
             <div class="col-md-3 mb-4">
                 <img src="/assets/img/ic_tnm_logo_gray.png" width="132" height="25" class="mb-2">
                 <span class="mb-2">&copy; 2017 - TheNextMe &bull; Uniq Coaching GmbH</span>
-                <a href="/de/impressum/">Impressum</a>
                 <a href="/de/agb/">AGB</a>
+                <a href="/de/impressum/">Impressum</a>
+                <a href="/de/datenschutz/">Datenschutz</a>
             </div>
             <div class="col-md-3 mb-4">
                 <span>Unterstützt von:</span>
@@ -649,8 +675,8 @@
                 <span>Folge uns auf:</span>
                 <a href="https://www.facebook.com/TheNextMe.DE" target="_blank"><img
                         src="/assets/img/ic_facebook.png" width="36" height="36" alt="Facebook"></a>
-                <a href="#"><img src="/assets/img/ic_youtube.png" width="36" height="36"
-                                 alt="YouTube"></a>
+                <a href="http://www.youtube.com/channel/UCq2myo2PCHeJZujjNvAG1VA?sub_confirmation=1" target="_blank"><img
+                        src="/assets/img/ic_youtube.png" width="36" height="36" alt="YouTube"></a>
             </div>
         </div>
     </div>

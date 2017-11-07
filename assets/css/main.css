@@ -73,6 +73,16 @@ a.btn-cta-fixed {
   background: #0081a1;
   border: 1px solid #0081a1; }
 
+span.cc-message {
+  font-size: 13px;
+  line-height: 1.1; }
+
+a.cc-btn {
+  padding: 5px 8px; }
+
+a.cc-btn:hover {
+  background: #0081a1 !important; }
+
 section, footer {
   position: relative;
   width: 100%; }
