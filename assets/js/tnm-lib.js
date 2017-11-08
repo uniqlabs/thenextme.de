@@ -38,6 +38,20 @@ function formatPrice(price) {
   return ('' + price.toFixed(2)).replace('.', ',') + '&euro;';
 }
 
+function initExitIntentModal(doc, cb) {
+  var suppressEIM = readCookie('suppressEIM');
+  if (suppressEIM) return;
+  $.exitIntent('enable');
+  doc.bind('exitintent', cb);
+}
+
+function exitIntentModalDismissed() {
+  var suppressEIM = readCookie('suppressEIM');
+  if (!suppressEIM) {
+    createCookie('suppressEIM', true, 3);
+    $.exitIntent('disable');
+  }
+}
 
 function readCookie(name) {
   var nameEQ = encodeURIComponent(name) + "=";

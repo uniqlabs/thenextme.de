@@ -32,7 +32,7 @@ $(document).ready(function () {
     initFeatureSlider();
     updateDimensions();
     initCats();
-    initExitIntent();
+    initExitModal();
     initVideo();
     $window.scroll(handleScroll);
     handleScroll();
@@ -146,9 +146,9 @@ $(document).ready(function () {
     selectCat(idx);
   }
 
-  function initExitIntent() {
-    $.exitIntent('enable');
-    $document.bind('exitintent', showExitModal);
+  function initExitModal() {
+    initExitIntentModal($document, showExitModal);
+    $extModal.on('hidden.bs.modal', exitIntentModalDismissed);
   }
 
   function showExitModal() {

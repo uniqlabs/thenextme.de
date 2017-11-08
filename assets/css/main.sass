@@ -5,6 +5,7 @@
 
 $white: #fff
 $tWhite95: rgba(255, 255, 255, 0.95)
+$modalGray: #fcfcfc
 $lightGray: #f6f6f6
 $lightSilver: #eee
 $lightAsh: #e7edeb
@@ -260,13 +261,14 @@ section, footer
       font-weight: 400
       line-height: 1.5
       margin: 20px 0
+
 .sec-welcome.job
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('/assets/img/bg_cover_02.jpg') no-repeat center center
   background-size: cover
+
 .sec-welcome.freelance
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('/assets/img/bg_cover_09.jpg') no-repeat center center
   background-size: cover
-
 
 #claim
   height: 100%
@@ -452,9 +454,10 @@ section, footer
   max-width: 100%
 
 @media (min-width: 992px)
-  .modal-dialog
-    width: 80%
-    max-width: 80%
+  #modal-video
+    .modal-dialog
+      width: 80%
+      max-width: 80%
 
 .modal-content
   margin-top: 0
@@ -473,9 +476,32 @@ section, footer
 .modal-header, .modal-footer
   border: 0
 
-.modal-header .close
+button.close
   font-size: 44px
   color: $white
+  margin: -16px 0 0 16px
+  outline: none
+
+.exit-content
+  display: inline-block
+  .wrapper
+    display: flex
+  .form
+    width: 540px
+    height: 479px
+  .goodie
+    position: relative
+    height: 479px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 48px
+    background: $modalGray
+    button.close
+      position: absolute
+      top: 16px
+      right: 12px
+      color: $darkGray
 
 .sec-testimonials
   padding-top: 24px

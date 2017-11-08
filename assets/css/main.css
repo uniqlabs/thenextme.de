@@ -240,7 +240,7 @@ section, footer {
   background-size: cover; }
 
 .sec-welcome.freelance {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_09.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("/assets/img/bg_cover_09.jpg") no-repeat center center;
   background-size: cover; }
 
 #claim {
@@ -418,7 +418,7 @@ section, footer {
   max-width: 100%; }
 
 @media (min-width: 992px) {
-  .modal-dialog {
+  #modal-video .modal-dialog {
     width: 80%;
     max-width: 80%; } }
 .modal-content {
@@ -438,9 +438,32 @@ section, footer {
 .modal-header, .modal-footer {
   border: 0; }
 
-.modal-header .close {
+button.close {
   font-size: 44px;
-  color: #fff; }
+  color: #fff;
+  margin: -16px 0 0 16px;
+  outline: none; }
+
+.exit-content {
+  display: inline-block; }
+  .exit-content .wrapper {
+    display: flex; }
+  .exit-content .form {
+    width: 540px;
+    height: 479px; }
+  .exit-content .goodie {
+    position: relative;
+    height: 479px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 48px;
+    background: #fcfcfc; }
+    .exit-content .goodie button.close {
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      color: #333; }
 
 .sec-testimonials {
   padding-top: 24px; }
