@@ -21,6 +21,8 @@ $dSecondary: darken($secondary, 10%)
 $tertiary: #f55
 $dTertiary: lighten($tertiary, 5%)
 
+$highlight: #72be49
+
 $headingFont: 'Source Sans Pro'
 $textFont: 'Raleway'
 
@@ -578,6 +580,17 @@ button.close
     padding: 32px 16px 16px
     border: 1px solid $silver
     margin: 0 8px 8px
+    .trial
+      position: absolute
+      top: -6px
+      right: -6px
+      font-size: 14px
+      font-weight: 600
+      border-radius: 0 0 0 16px
+      padding: 12px 24px
+      color: $white
+      background: $highlight
+      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2)
     .discount
       display: none
       .corner
@@ -605,6 +618,7 @@ button.close
     font-size: 18px
     color: $gray
     text-transform: uppercase
+    margin-top: 32px
   .price
     font-size: 64px
     font-weight: 600

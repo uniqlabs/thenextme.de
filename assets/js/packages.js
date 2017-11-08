@@ -15,11 +15,11 @@ $(document).ready(function () {
       var op = prc.d ? ' (<strike>' + formatPrice(prc.t) + '</strike>)' : '';
       $('.price span.' + pkg).html(formatPrice(p).replace(',', ',<sup>') + '</sup>');
       $('.ticks span.' + pkg).html(formatPrice(t) + op);
-      if (prc.d) {
-        $('.discount span.' + pkg).html(Math.round(prc.d * 100));
-        $('.discount').show();
-      } else
-        $('.discount').hide();
+      // if (prc.d) {
+      //   $('.discount span.' + pkg).html(Math.round(prc.d * 100));
+      //   $('.discount').show();
+      // } else
+      //   $('.discount').hide();
     });
   }
   

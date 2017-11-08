@@ -236,7 +236,7 @@ section, footer {
     margin: 20px 0; }
 
 .sec-welcome.job {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_15.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_15.jpg") no-repeat center center;
   background-size: cover; }
 
 .sec-welcome.freelance {
@@ -535,6 +535,17 @@ button.close {
     padding: 32px 16px 16px;
     border: 1px solid #ccc;
     margin: 0 8px 8px; }
+    .sec-pricing .price-box .trial {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 0 0 0 16px;
+      padding: 12px 24px;
+      color: #fff;
+      background: #72be49;
+      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.15); }
     .sec-pricing .price-box .discount {
       display: none; }
       .sec-pricing .price-box .discount .corner {
@@ -561,7 +572,8 @@ button.close {
     font-weight: 600;
     font-size: 18px;
     color: #808080;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 32px; }
   .sec-pricing .price {
     font-size: 64px;
     font-weight: 600; }
