@@ -544,8 +544,8 @@ button.close {
       border-radius: 0 0 0 16px;
       padding: 12px 24px;
       color: #fff;
-      background: #72be49;
-      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.15); }
+      background: #72be48;
+      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2); }
     .sec-pricing .price-box .discount {
       display: none; }
       .sec-pricing .price-box .discount .corner {

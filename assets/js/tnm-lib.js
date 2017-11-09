@@ -45,7 +45,7 @@ function initExitIntentModal(doc, cb) {
   doc.bind('exitintent', cb);
 }
 
-function exitIntentModalDismissed() {
+function switchOffEIM() {
   var suppressEIM = readCookie('suppressEIM');
   if (!suppressEIM) {
     createCookie('suppressEIM', true, 3);

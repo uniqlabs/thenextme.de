@@ -148,7 +148,7 @@ $(document).ready(function () {
 
   function initExitModal() {
     initExitIntentModal($document, showExitModal);
-    $extModal.on('hidden.bs.modal', exitIntentModalDismissed);
+    $extModal.on('hidden.bs.modal', switchOffEIM);
   }
 
   function showExitModal() {
