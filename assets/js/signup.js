@@ -9,8 +9,8 @@ $(document).ready(function () {
   var $btnText = $('#btn-submit .text');
   var $reqError = $('.req-error');
   var $errMsg = $('.alert-danger');
-  // var apiUrl = r('uggcf://havd-ncv-') + (isLocalhost() ? r('qri') : r('cebq')) + r('.urebxhncc.pbz/hfref');
-  var apiUrl = r('uggcf://havd-ncv-qri.urebxhncc.pbz/hfref');
+  var apiUrl = r('uggcf://havd-ncv-') + (isLocalhost() ? r('qri') : r('cebq')) + r('.urebxhncc.pbz/hfref');
+  // var apiUrl = r('uggcf://havd-ncv-qri.urebxhncc.pbz/hfref');
   var params;
 
   function init() {
