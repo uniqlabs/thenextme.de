@@ -765,6 +765,9 @@ button.close {
   .sec-cta img {
     width: 225px;
     height: 360px; } }
+.sec-auth {
+  min-height: 60vh; }
+
 footer {
   padding: 48px 0 96px; }
   footer a, footer span {
