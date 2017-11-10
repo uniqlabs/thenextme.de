@@ -130,8 +130,8 @@ section, footer
   z-index: 10000
   img
     position: relative
-    top: 7px
-    left: -15px
+    top: 8px
+    left: 1px
   a
     font-size: 18px
     color: $darkGray
@@ -155,8 +155,6 @@ section, footer
   .mobile-nav
     img
       left: 1px
-    button.nav-close
-      margin-right: 17px
 
 .navbar
   padding: 8px 48px
@@ -241,6 +239,7 @@ section, footer
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/assets/img/bg_cover_01.jpg') no-repeat center center
   background-size: cover
   .endorsements
+    min-width: 128px
     width: 80%
     max-width: 180px
     min-height: 300px
@@ -257,12 +256,18 @@ section, footer
   .claim
     h1
       font-size: 54px
-    h2
-      font-family: $textFont
-      font-size: 24px
-      font-weight: 400
-      line-height: 1.5
-      margin: 20px 0
+    ul
+      margin: 32px 0 40px -36px
+      list-style: none
+      li
+        color: $white
+        background: no-repeat 0 0 / 24px 24px
+        @include svg((viewBox: 0 0 24 24))
+          @include svg('path', (fill: none, stroke: $white, stroke-width: 3, d: 'm 3.217858,14.01096 6.0658,5.41585 11.2649,-16.24755'))
+        margin: 8px 0
+        padding: 0 0 4px 36px
+        font-size: 24px
+        line-height: 1.2
 
 .sec-welcome.job
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('/assets/img/bg_cover_15.jpg') no-repeat center center
@@ -291,10 +296,15 @@ section, footer
   .sec-welcome
     height: calc(100vh + 90px)
     .claim
+      padding: 0 20px
       h1
-        font-size: 48px
-      h2
-        font-size: 18px
+        font-size: 40px
+      ul li
+        padding-left: 32px
+        font-size: 20px
+        background: no-repeat 0 0 / 20px 20px
+        @include svg((viewBox: 0 0 24 24))
+          @include svg('path', (fill: none, stroke: $white, stroke-width: 3, d: 'm 3.217858,14.01096 6.0658,5.41585 11.2649,-16.24755'))
   #claim
     height: 60%
     justify-content: flex-end !important
@@ -484,6 +494,9 @@ button.close
   margin: -16px 0 0 16px
   outline: none
 
+button.close:hover
+  color: $white
+
 .exit-content
   display: inline-block
   .wrapper
@@ -523,10 +536,10 @@ button.close
     height: 180px
     transition: transform 400ms
   .btn-prev
-    left: -36px
+    left: -30px
     background: url('/assets/img/btn_prev.png') no-repeat center center / 64px 180px
   .btn-next
-    right: -36px
+    right: -30px
     background: url('/assets/img/btn_next.png') no-repeat center center / 64px 180px
   .btn-prev:hover, .btn-next:hover
     cursor: pointer
@@ -545,9 +558,11 @@ button.close
     img.rounded-circle
       float: left
       vertical-align: middle
+      margin-right: 20px
     .meta
       float: left
-      margin: 24px 0 0 20px
+      min-width: 180px
+      margin: 24px 0 0
     .review
       clear: both
       padding-top: 16px
@@ -572,6 +587,18 @@ button.close
   color: $silver
   text-transform: uppercase
 
+.trial
+  position: absolute
+  top: -6px
+  right: -6px
+  font-size: 14px
+  font-weight: 600
+  border-radius: 0 0 0 16px
+  padding: 12px 24px
+  color: $white
+  background: $highlight
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2)
+
 .sec-pricing
   padding-bottom: 64px
   .price-box
@@ -580,17 +607,6 @@ button.close
     padding: 32px 16px 16px
     border: 1px solid $silver
     margin: 0 8px 8px
-    .trial
-      position: absolute
-      top: -6px
-      right: -6px
-      font-size: 14px
-      font-weight: 600
-      border-radius: 0 0 0 16px
-      padding: 12px 24px
-      color: $white
-      background: $highlight
-      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2)
     .discount
       display: none
       .corner
@@ -775,7 +791,8 @@ button.close
     color: $tertiary
     margin-top: 4px
   .card
-    padding: 12px 16px
+    position: relative
+    padding: 54px 16px 4px
   .chosen, .price, .discount
     font-size: 13px
     color: $gray

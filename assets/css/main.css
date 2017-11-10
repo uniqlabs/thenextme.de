@@ -106,8 +106,8 @@ section, footer {
   z-index: 10000; }
   .mobile-nav img {
     position: relative;
-    top: 7px;
-    left: -15px; }
+    top: 8px;
+    left: 1px; }
   .mobile-nav a {
     font-size: 18px;
     color: #333;
@@ -129,9 +129,7 @@ section, footer {
 
 @media(max-width: 575px) {
   .mobile-nav img {
-    left: 1px; }
-  .mobile-nav button.nav-close {
-    margin-right: 17px; } }
+    left: 1px; } }
 .navbar {
   padding: 8px 48px; }
 
@@ -213,6 +211,7 @@ section, footer {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_01.jpg") no-repeat center center;
   background-size: cover; }
   .sec-welcome .endorsements {
+    min-width: 128px;
     width: 80%;
     max-width: 180px;
     min-height: 300px;
@@ -228,12 +227,17 @@ section, footer {
       margin: 16px 0; }
   .sec-welcome .claim h1 {
     font-size: 54px; }
-  .sec-welcome .claim h2 {
-    font-family: "Raleway";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 20px 0; }
+  .sec-welcome .claim ul {
+    margin: 32px 0 40px -36px;
+    list-style: none; }
+    .sec-welcome .claim ul li {
+      color: #fff;
+      background: no-repeat 0 0/24px 24px;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke%2Dwidth%3D%223%22%20d%3D%22m%203%2E217858%2C14%2E01096%206%2E0658%2C5%2E41585%2011%2E2649%2C%2D16%2E24755%22%2F%3E%3C%2Fsvg%3E");
+      margin: 8px 0;
+      padding: 0 0 4px 36px;
+      font-size: 24px;
+      line-height: 1.2; }
 
 .sec-welcome.job {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_15.jpg") no-repeat center center;
@@ -261,10 +265,15 @@ section, footer {
 @media(max-width: 767px) {
   .sec-welcome {
     height: calc(100vh + 90px); }
-    .sec-welcome .claim h1 {
-      font-size: 48px; }
-    .sec-welcome .claim h2 {
-      font-size: 18px; }
+    .sec-welcome .claim {
+      padding: 0 20px; }
+      .sec-welcome .claim h1 {
+        font-size: 40px; }
+      .sec-welcome .claim ul li {
+        padding-left: 32px;
+        font-size: 20px;
+        background: no-repeat 0 0/20px 20px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke%2Dwidth%3D%223%22%20d%3D%22m%203%2E217858%2C14%2E01096%206%2E0658%2C5%2E41585%2011%2E2649%2C%2D16%2E24755%22%2F%3E%3C%2Fsvg%3E"); }
 
   #claim {
     height: 60%;
@@ -444,6 +453,9 @@ button.close {
   margin: -16px 0 0 16px;
   outline: none; }
 
+button.close:hover {
+  color: #fff; }
+
 .exit-content {
   display: inline-block; }
   .exit-content .wrapper {
@@ -482,10 +494,10 @@ button.close {
     height: 180px;
     transition: transform 400ms; }
   .sec-testimonials .btn-prev {
-    left: -36px;
+    left: -30px;
     background: url("/assets/img/btn_prev.png") no-repeat center center/64px 180px; }
   .sec-testimonials .btn-next {
-    right: -36px;
+    right: -30px;
     background: url("/assets/img/btn_next.png") no-repeat center center/64px 180px; }
   .sec-testimonials .btn-prev:hover, .sec-testimonials .btn-next:hover {
     cursor: pointer;
@@ -503,10 +515,12 @@ button.close {
       margin-bottom: 10px; }
     .sec-testimonials .testi img.rounded-circle {
       float: left;
-      vertical-align: middle; }
+      vertical-align: middle;
+      margin-right: 20px; }
     .sec-testimonials .testi .meta {
       float: left;
-      margin: 24px 0 0 20px; }
+      min-width: 180px;
+      margin: 24px 0 0; }
     .sec-testimonials .testi .review {
       clear: both;
       padding-top: 16px; }
@@ -527,6 +541,18 @@ button.close {
   color: #ccc;
   text-transform: uppercase; }
 
+.trial {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0 0 0 16px;
+  padding: 12px 24px;
+  color: #fff;
+  background: #72be48;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2); }
+
 .sec-pricing {
   padding-bottom: 64px; }
   .sec-pricing .price-box {
@@ -535,17 +561,6 @@ button.close {
     padding: 32px 16px 16px;
     border: 1px solid #ccc;
     margin: 0 8px 8px; }
-    .sec-pricing .price-box .trial {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 0 0 0 16px;
-      padding: 12px 24px;
-      color: #fff;
-      background: #72be48;
-      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.2); }
     .sec-pricing .price-box .discount {
       display: none; }
       .sec-pricing .price-box .discount .corner {
@@ -719,7 +734,8 @@ button.close {
   color: #f55;
   margin-top: 4px; }
 .sec-signup .card {
-  padding: 12px 16px; }
+  position: relative;
+  padding: 54px 16px 4px; }
 .sec-signup .chosen, .sec-signup .price, .sec-signup .discount {
   font-size: 13px;
   color: #808080; }
