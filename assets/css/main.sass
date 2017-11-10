@@ -132,7 +132,7 @@ section, footer
   position: fixed
   width: 100%
   height: 100%
-  background: rgba(255, 255, 255, 0.47)
+  background: rgba(255, 255, 255, 0.97)
   z-index: 10000
   img
     position: relative
@@ -301,6 +301,8 @@ section, footer
     min-height: 0
     border-radius: 0
     margin: 0
+    p
+      margin-bottom: 1px
 
 @media(max-width: 767px)
   .sec-welcome
@@ -323,7 +325,6 @@ section, footer
   margin-top: -120px
   .feature-box
     height: 120px
-    width: 100%
     background: rgba(0, 0, 0, 0.4)
     border-bottom: 10px solid transparent
     svg
@@ -717,6 +718,11 @@ button.close:hover
       max-width: 310px
     .price-box
       min-height: 412px
+
+@media(max-width: 400px)
+  .sec-pricing
+    .ribbon
+      font-size: 13px
 
 .sec-wyg
   min-height: 60vh
