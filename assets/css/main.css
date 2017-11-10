@@ -272,7 +272,7 @@ section, footer {
     border-radius: 0;
     margin: 0; }
     #mob-end .endorsements p {
-      margin-bottom: 1px; }
+      margin-bottom: 0; }
 
 @media(max-width: 767px) {
   .sec-welcome {
