@@ -23,7 +23,7 @@
             window[das] = true;
         }
     </script>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){if (location.hostname === "localhost") return;w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -62,6 +62,7 @@
 </noscript>
 
 
+
 <nav class="mobile-nav">
     <div class="container-fluid">
         <div class="row">
@@ -72,13 +73,16 @@
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <a href="#">Ziele</a>
+                <a class=""
+                        href="/de/ziele/">Ziele</a>
                 <hr>
                 <a href="/de/pakete/">Preis</a>
                 <hr>
-                <a href="#">Erfolge</a>
+                <a class=""
+                        href="/de/erfolge/">Erfolge</a>
                 <hr>
-                <a href="#">So geht's</a>
+                <a class=""
+                        href="">So geht's</a>
             </div>
         </div>
     </div>
@@ -89,7 +93,7 @@
             aria-expanded="false" aria-label="Menü aufklappen">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         <img id="logo"
              src="/assets/img/ic_tnm_logo.png" width="200" height="48" alt="TheNextMe">
         <img id="logo-white"
@@ -98,7 +102,8 @@
     <div id="nbc" class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
             <li class="nav-item mx-2">
-                <a class="nav-link" href="#">
+                <a class="nav-link "
+                   href="/de/ziele/">
                     Ziele</a>
             </li>
             <li class="nav-item mx-2">
@@ -106,11 +111,13 @@
                     Preis</a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link" href="#">
+                <a class="nav-link "
+                   href="/de/erfolge/">
                     Erfolge</a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link" href="#">
+                <a class="nav-link "
+                   href="/de/so-gehts/">
                     So geht's</a>
             </li>
             <li class="nav-item mx-2 ml-xl-4">
@@ -445,27 +452,6 @@
                     
                     
                     <div class="testi">
-                        <img src="/assets/img/testimonials/elli34.jpg"
-                             class="rounded-circle" width="120px" height="120px">
-                        <div class="meta">
-                            <h3>Elli, 34</h3>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            
-                            <span class="star half"></span>
-                            
-                        </div>
-                        <div class="review">
-                            <p>Auf der Suche nach meinem Traumjob habe ich viele Bücher gelesen, aber konnte diese schlecht in die Tat umsetzen. [....] Mit meinem Coach habe ich einen sehr konkreten Aktionsplan erstellt, um mich als Organisationsberaterin selbstständig zu machen. Das funktioniert super.
-</p>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="testi">
                         <img src="/assets/img/testimonials/melanie56.jpg"
                              class="rounded-circle" width="120px" height="120px">
                         <div class="meta">
@@ -508,27 +494,6 @@
                     
                     
                     <div class="testi">
-                        <img src="/assets/img/testimonials/ralf41.jpg"
-                             class="rounded-circle" width="120px" height="120px">
-                        <div class="meta">
-                            <h3>Ralf, 41</h3>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            
-                            <span class="star full"></span>
-                            
-                        </div>
-                        <div class="review">
-                            <p>Ich bewerbe mich gerade auf meine Traumstelle und <i>TheNextMe</i> begleitet mich dabei. Die Gespräche helfen mir, alle persönlichen Zweifel vor Veränderung auszuräumen. Das erleichtert mich sehr. [...] Ich stelle mich nun selbstbewusst und mit positiver Ausstrahlung meiner Bewerbungsrunde.
-</p>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="testi">
                         <img src="/assets/img/testimonials/uta41.jpg"
                              class="rounded-circle" width="120px" height="120px">
                         <div class="meta">
@@ -542,28 +507,7 @@
                             
                         </div>
                         <div class="review">
-                            <p><i>TheNextMe</i> hat mich dort abgeholt, wo ich seit Langem auf der Stelle getreten bin: meine Berufung zu finden und zu leben. Das Coaching hat mir geholfen, den Traum meiner Selbstständigkeit konkret zu machen. Vor zwei Wochen habe ich meinen eigenen Online-Shop eröffnet.
-</p>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="testi">
-                        <img src="/assets/img/testimonials/bianca32.jpg"
-                             class="rounded-circle" width="120px" height="120px">
-                        <div class="meta">
-                            <h3>Bianca, 32</h3>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            <span class="star full"></span>
-                            
-                            <span class="star full"></span>
-                            
-                        </div>
-                        <div class="review">
-                            <p>In meinem Job war ich viel unterwegs und habe auch oft am Wochenende gearbeitet. Auf der Suche nach geregelteren Arbeitszeiten ergab sich die Möglichkeit intern zu wechseln. <i>TheNextMe</i> hat mich unterstützt, diesen Schritt zu gehen. [...] Ich habe am Ende mein Ziel problemlos erreicht. Danke!
+                            <p><i>TheNextMe</i> hat mich dort abgeholt, wo ich seit Langem auf der Stelle getreten bin: meine Berufung zu finden und zu leben. Das Coaching hat mir geholfen, den Traum meiner Selbstständigkeit konkret zu machen. Vor zwei Wochen habe ich meinen eigenen Dawanda-Shop eröffnet.
 </p>
                         </div>
                     </div>
@@ -585,6 +529,69 @@
                         </div>
                         <div class="review">
                             <p>Seit Jahren habe ich die Ergebnisse meiner Forschungsarbeiten an der Universität mit mir rumgeschleppt. <i>TheNextMe</i> hat mir geholfen, die nötige Zielstrebigkeit zu entwickeln und mich begleitet, bis mein Ziel erreicht und die Arbeit eingereicht war. Hierfür bin ich sehr dankbar!
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/elli34.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Elli, 34</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star half"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Auf der Suche nach meinem Traumjob habe ich viele Bücher gelesen, aber konnte diese schlecht in die Tat umsetzen. [....] Mit meinem Coach habe ich einen sehr konkreten Aktionsplan erstellt, um mich als Organisationsberaterin selbstständig zu machen. Das funktioniert super.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/ralf41.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Ralf, 41</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>Ich bewerbe mich gerade auf meine Traumstelle und <i>TheNextMe</i> begleitet mich dabei. Die Gespräche helfen mir, alle persönlichen Zweifel vor Veränderung auszuräumen. Das erleichtert mich sehr. [...] Ich stelle mich nun selbstbewusst und mit positiver Ausstrahlung meiner Bewerbungsrunde.
+</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="testi">
+                        <img src="/assets/img/testimonials/bianca32.jpg"
+                             class="rounded-circle" width="120px" height="120px">
+                        <div class="meta">
+                            <h3>Bianca, 32</h3>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            <span class="star full"></span>
+                            
+                            <span class="star full"></span>
+                            
+                        </div>
+                        <div class="review">
+                            <p>In meinem Job war ich viel unterwegs und habe auch oft am Wochenende gearbeitet. Auf der Suche nach geregelteren Arbeitszeiten ergab sich die Möglichkeit intern zu wechseln. <i>TheNextMe</i> hat mich unterstützt, diesen Schritt zu gehen. [...] Ich habe am Ende mein Ziel problemlos erreicht. Danke!
 </p>
                         </div>
                     </div>
@@ -626,7 +633,8 @@
                             
                         </div>
                         <div class="review">
-                            <p><i>TheNextMe</i> war mein Begleiter durch schwierige und aufregende Zeiten. Ziel komplett erreicht [...] Ich lebe mit meinem Traummann zusammen und bin super glücklich!</p>
+                            <p><i>TheNextMe</i> war mein Begleiter durch schwierige und aufregende Zeiten. Ziel komplett erreicht [...] Ich lebe mit meinem Traummann zusammen und bin super glücklich!
+</p>
                         </div>
                     </div>
                     
@@ -729,6 +737,7 @@
 <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="/assets/js/nav.min.js"></script>
 <script src="/assets/js/vendor/exitintent.min.js"></script>
 <script src="/assets/js/vendor/slick.min.js"></script>
 <script src="/assets/js/tnm-lib.min.js"></script>

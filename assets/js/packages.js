@@ -22,13 +22,6 @@ $(document).ready(function () {
       //   $('.discount').hide();
     });
   }
-  
-  function initToggles() {
-    $('.sec-faq .q').click(function () {
-      $(this).toggleClass('open');
-      $(this).next('.a').slideToggle();
-    });
-  }
 
   function initSmoothScroll() {
     $("a[href^='#']").click(function (event) {

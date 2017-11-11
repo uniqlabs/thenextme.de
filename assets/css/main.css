@@ -79,6 +79,23 @@ a.btn-cta-fixed {
   background: #0081a1;
   border: 1px solid #0081a1; }
 
+.btn-outline-white {
+  background: transparent;
+  border: 1px solid #fff; }
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: #00aad4; }
+
+.btn-outline-dark, a.btn-outline-dark {
+  background: transparent;
+  border: 1px solid #333;
+  color: #333; }
+
+.btn-outline-dark:hover, a.btn-outline-dark:hover {
+  background: #333;
+  color: #fff; }
+
 span.cc-message {
   font-size: 13px;
   line-height: 1.1; }
@@ -118,7 +135,7 @@ section, footer {
     font-size: 18px;
     color: #333;
     text-transform: uppercase; }
-  .mobile-nav a:hover {
+  .mobile-nav a:hover, .mobile-nav a.active {
     color: #f55; }
   .mobile-nav button.nav-close {
     display: inline-block;
@@ -170,7 +187,7 @@ section, footer {
     font-weight: 500;
     text-transform: uppercase;
     color: #fff; }
-  #navbar .nav-link:not(.signup):hover {
+  #navbar .nav-link:not(.signup):hover, #navbar .nav-link.active {
     opacity: 0.5; }
   #navbar .nav-link.signup {
     display: inline-block;
@@ -205,7 +222,8 @@ section, footer {
   #navbar.opaque .nav-link:not(.signup) {
     color: #333; }
   #navbar.opaque .nav-link:not(.signup).active {
-    color: #00aad4; }
+    color: #f55;
+    opacity: 1; }
   #navbar.opaque .nav-link.signup {
     color: #333;
     border: 1px solid #333; }
@@ -783,6 +801,53 @@ button.close:hover {
   position: relative;
   height: 55px; }
 
+.sec-goals {
+  background: #fff; }
+
+.sec-stories {
+  background: #f6f6f6; }
+  .sec-stories .story .photo {
+    position: relative;
+    z-index: 100; }
+    .sec-stories .story .photo img {
+      border: 8px solid #fff;
+      margin: 24px -18px 24px 0;
+      transform: rotate(-4deg);
+      box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15); }
+  .sec-stories .story .box {
+    position: relative;
+    background: #fff;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -3px -6px 12px rgba(0, 0, 0, 0.05);
+    padding: 32px 16px 32px 54px; }
+    .sec-stories .story .box h3 {
+      font-family: "Raleway";
+      font-size: 24px;
+      font-weight: 400;
+      color: #00aad4; }
+    .sec-stories .story .box .aspect {
+      min-width: 30%;
+      padding-right: 24px; }
+    .sec-stories .story .box .caption {
+      font-size: 20px;
+      color: #333; }
+    .sec-stories .story .box .content {
+      font-size: 14px;
+      color: #808080; }
+    .sec-stories .story .box .testimonial {
+      padding: 24px 16px 0 8px; }
+      .sec-stories .story .box .testimonial p {
+        margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .sec-stories .story .photo.right img {
+    margin: 24px 0 24px -28px;
+    box-shadow: -8px 8px 12px rgba(0, 0, 0, 0.15); } }
+@media (max-width: 575px) {
+  .sec-stories .story .box {
+    padding-left: 22px; } }
+@media (max-width: 767px) {
+  .sec-stories .story .photo img {
+    margin: 0 0 -10px 8px; } }
 .sec-cta {
   background: #e7edeb; }
   .sec-cta h2 {
@@ -790,6 +855,18 @@ button.close:hover {
   .sec-cta p {
     font-size: 20px;
     margin: 20px 0 32px; }
+
+.sec-advantages .advantage h3 {
+  font-family: "Raleway";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 18px; }
+.sec-advantages .advantage p {
+  font-size: 14px; }
+
+.sec-cta-small {
+  background: #00aad4;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.1); }
 
 @media(max-width: 767px) {
   .sec-cta h2 {
@@ -836,6 +913,23 @@ footer {
   width: 100%;
   height: 80vh;
   color: #fff; }
+
+.cover-cta-page {
+  width: 100%;
+  height: 70vh;
+  color: #fff; }
+
+.cover-how-it-works {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg_cover_16.jpg") no-repeat center top;
+  background-size: cover, cover; }
+
+.cover-goals {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg_cover_17.jpg") no-repeat center top;
+  background-size: cover, cover; }
+
+.cover-stories {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/bg_cover_18.jpg") no-repeat center top;
+  background-size: cover, cover; }
 
 .spinner {
   position: absolute;
