@@ -79,6 +79,16 @@ a.btn-cta-fixed {
   background: #0081a1;
   border: 1px solid #0081a1; }
 
+a.btn-outline-primary {
+  color: #00aad4;
+  background: transparent;
+  border: 1px solid #00aad4; }
+
+a.btn-outline-primary:hover {
+  color: #fff;
+  background: #00aad4;
+  border: 1px solid #00aad4; }
+
 .btn-outline-white {
   background: transparent;
   border: 1px solid #fff; }
@@ -801,8 +811,10 @@ button.close:hover {
   position: relative;
   height: 55px; }
 
-.sec-goals {
-  background: #fff; }
+.sec-goals .category h3 {
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight: 400; }
 
 .sec-stories {
   background: #f6f6f6; }
@@ -860,7 +872,7 @@ button.close:hover {
   font-family: "Raleway";
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 18px; }
+  font-size: 16px; }
 .sec-advantages .advantage p {
   font-size: 14px; }
 
@@ -956,11 +968,6 @@ footer {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s; }
 
-@-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0); }
-  40% {
-    -webkit-transform: scale(1); } }
 @keyframes sk-bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -968,5 +975,34 @@ footer {
   40% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1); } }
+.typed-cursor {
+  color: #00aad4;
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
