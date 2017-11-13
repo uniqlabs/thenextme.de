@@ -16,7 +16,9 @@
 </head>
 <body>
 <script>
-    window.location = '/de/';
+    var s = window.location.search;
+    var h = window.location.hash;
+    window.location = '/de/' + s + h;
 </script>
 </body>
 </html>
