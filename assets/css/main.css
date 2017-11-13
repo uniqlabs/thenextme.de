@@ -850,6 +850,19 @@ button.close:hover {
       .sec-stories .story .box .testimonial p {
         margin-bottom: 0; }
 
+.sec-how-it-works .steps {
+  background: url("/assets/img/bg_vdotted_line.png") repeat-y left 42px top 0/12px 12px; }
+  .sec-how-it-works .steps h3 {
+    font-family: "Raleway";
+    font-size: 24px;
+    color: #00aad4;
+    font-weight: 400; }
+  .sec-how-it-works .steps p {
+    margin-bottom: 0; }
+  .sec-how-it-works .steps .explanation {
+    font-size: 13px;
+    color: gray; }
+
 @media (min-width: 768px) {
   .sec-stories .story .photo.right img {
     margin: 24px 0 24px -28px;
