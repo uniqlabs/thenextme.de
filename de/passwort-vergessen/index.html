@@ -9,7 +9,7 @@
     <meta property="og:title" content="TheNextMe - Erreiche ein Lebensziel"/>
     <meta property="og:image" content="https://www.thenextme.de/assets/img/tnm_facebook_bg_1510691576.jpg"/>
     <meta property="og:description" content="Du willst beruflich durchstarten, regelmäßig Sport machen oder eine glückliche Beziehung? TheNextMe begleitet Dich auf dem Weg zu Deinem nächsten Lebensziel."/>
-    <meta property="og:url" content="http://www.thenextme.de/de/registrieren/"/>
+    <meta property="og:url" content="http://www.thenextme.de/de/passwort-vergessen/"/>
     <meta property="og:locale" content="de_DE"/>
     <link rel="icon" href="/assets/img/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
@@ -67,30 +67,23 @@
     </a>
 </nav>
 
-<section id="paket-waehlen" class="sec-signup">
+<section class="sec-auth">
     <div class="container">
         <div class="row">
             <div class="col text-center pb-4">
-                <div class="step">Schritt 2</div>
-                <h2>Erstelle Dein Nutzerkonto</h2>
+                <h2>Passwort vergessen?</h2>
             </div>
         </div>
-        <div class="row dn req-error">
-            <div class="col-md-8 mx-md-auto text-center">
-                <div class="alert alert-danger" role="alert"></div>
+        <div class="row dn alert-row">
+            <div class="col-md-6 mx-md-auto text-center">
+                <div id="msg" class="alert" role="alert"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-5 col-xl-4 ml-md-auto">
-                <form id="signup-form" data-toggle="validator" role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="firstName"
-                               data-minlength="2"
-                               data-error="Bitte gib einen Vornamen mit mindestens 2 Buchstaben ein."
-                               placeholder="Dein Vorname"
-                               required>
-                        <div class="help-block with-errors"></div>
-                    </div>
+        <div class="row form-row">
+            <div class="col-md-6 mx-auto">
+                <p>Gib Deine E-Mail-Adresse ein und wir schicken Dir einen Link zum Zurücksetzen Deines Passworts.
+</p>
+                <form id="forgot-password-form" data-toggle="validator" role="form">
                     <div class="form-group">
                         <input type="email" class="form-control" id="email"
                                data-error="Bitte gib eine gültige E-Mail-Adresse ein."
@@ -99,63 +92,20 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password"
-                               data-minlength="8"
-                               data-error="Bitte gib ein Passwort mit mindestens 8 Zeichen ein."
-                               placeholder="Passwort (mind. 8 Zeichen)"
-                               required>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" id="newsletter">
-                            Ich möchte den Newsletter erhalten. Diese Einstellung kann ich jederzeit widerrufen.
-                        </label>
-                    </div>
-                    <div class="form-group">
                         <button id="btn-submit" type="submit" class="btn btn-primary btn-block">
                             <div class="spinner">
                                 <div class="bounce1"></div>
                                 <div class="bounce2"></div>
                                 <div class="bounce3"></div>
                             </div>
-                            <span class="text">Registrieren</span>
+                            <span class="text">Link anfordern</span>
                         </button>
                     </div>
-                    <div class="hidden-md-up">
-                        <p class="disclaimer">Durch Klick auf "Registrieren" akzeptierst Du unsere <a href="/de/agb/">AGB</a> und <a href="/de/datenschutz/">Datenschutzbestimmungen</a>. Du erhältst eine E-Mail mit einem Bestätigungslink und kannst im Anschluss Deine Bezahldaten eingeben.
-</p>
-                    </div>
                 </form>
-            </div>
-            <div class="col-md-5 col-xl-4 mr-md-auto">
-                <div class="card text-center">
-                    <div class="trial">7 Tage kostenlos</div>
-                    <div class="chosen">Gewähltes Paket:</div>
-                    <div class="package"><span class="months"></span> Monate</div>
-                    <div class="price">
-                        <span class="amount"></span> pro Monat,
-                        <span class="billed"></span>
-                    </div>
-                    <div class="discount"></div>
-                    <hr>
-                    <ul>
-                        <li>Persönlicher Coach</li>
-                        <li>Jederzeit kündbar</li>
-                        <li>Geld-zurück-Garantie</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4 hidden-sm-down">
-            <div class="col-md-8 mx-md-auto">
-                <p class="disclaimer">Durch Klick auf "Registrieren" akzeptierst Du unsere <a href="/de/agb/">AGB</a> und <a href="/de/datenschutz/">Datenschutzbestimmungen</a>. Du erhältst eine E-Mail mit einem Bestätigungslink und kannst im Anschluss Deine Bezahldaten eingeben.
-</p>
             </div>
         </div>
     </div>
 </section>
-
 
 
 <footer>
@@ -207,7 +157,7 @@
 <script src="/assets/js/vendor/exitintent.min.js"></script>
 <script src="/assets/js/vendor/validator.min.js"></script>
 <script src="/assets/js/tnm-lib.min.js"></script>
-<script src="/assets/js/signup.min.js"></script>
+<script src="/assets/js/password.js"></script>
 
 
 </body>

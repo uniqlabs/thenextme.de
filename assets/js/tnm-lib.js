@@ -12,6 +12,11 @@ var pricing = {
   discount: 0.15
 };
 
+function getBaseUrl(env) {
+  var nv = env || (isLocalhost() ? r('qri') : r('cebq'));
+  return r('uggcf://havd-ncv-') + nv + r('.urebxhncc.pbz');
+}
+
 function getPrice(id) {
   var variant = readCookie('variant');
   if (!variant) {
@@ -45,10 +50,12 @@ function initExitIntentModal(doc, cb) {
   doc.bind('exitintent', cb);
 }
 
-function switchOffEIM() {
+function switchOffEIM(days) {
+  var numDays = !isNaN(days) ? days : 1;
+  console.log('DAYS: ' + numDays);
   var suppressEIM = readCookie('suppressEIM');
   if (!suppressEIM) {
-    createCookie('suppressEIM', true, 3);
+    createCookie('suppressEIM', true, numDays);
     $.exitIntent('disable');
   }
 }
@@ -76,8 +83,21 @@ function createCookie(name, value, days) {
   document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
 }
 
+function getUrlParams() {
+  var params = {};
+  location.search.substr(1).split("&").forEach(function (item) {
+    params[item.split("=")[0]] = item.split("=")[1];
+  });
+  return params;
+}
+
+
 function r(s) {
   return s.replace(/[a-zA-Z]/g, function (c) {
     return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
   });
+}
+
+function isLocalhost() {
+  return (location.hostname === "localhost" || location.hostname === "127.0.0.1");
 }

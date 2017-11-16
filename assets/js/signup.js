@@ -9,23 +9,15 @@ $(document).ready(function () {
   var $btnText = $('#btn-submit .text');
   var $reqError = $('.req-error');
   var $errMsg = $('.alert-danger');
-  var apiUrl = r('uggcf://havd-ncv-') + (isLocalhost() ? r('qri') : r('cebq')) + r('.urebxhncc.pbz/hfref');
-  // var apiUrl = r('uggcf://havd-ncv-qri.urebxhncc.pbz/hfref');
   var params;
+  var apiUrl = getBaseUrl() + r('/hfref');
 
   function init() {
-    getUrlParams();
+    params = getUrlParams();
     checkRedirect();
     fillInPackageDetails();
     initSignUp();
     $firstName.focus();
-  }
-
-  function getUrlParams() {
-    params = {};
-    location.search.substr(1).split("&").forEach(function (item) {
-      params[item.split("=")[0]] = item.split("=")[1];
-    });
   }
 
   function checkRedirect() {
@@ -87,18 +79,6 @@ $(document).ready(function () {
     $.ajax(req);
   }
 
-  function setBusy(b) {
-    if (b) {
-      $inputs.attr('disabled', true);
-      $btnSpinner.fadeIn();
-      $btnText.fadeOut();
-    } else {
-      $inputs.attr('disabled', false);
-      $btnSpinner.fadeOut();
-      $btnText.fadeIn();
-    }
-  }
-
   function onReqSuccess() {
     setBusy(false);
     window.location = '/de/danke-registrierung/?tk=' + Math.random().toString(36).substring(2, 8);
@@ -114,9 +94,21 @@ $(document).ready(function () {
     if (jqxhr.status === 409)
       msg = 'Für diese E-Mail-Adresse existiert bereits ein Nutzerkonto.';
     else if (jqxhr.status === 400)
-      msg = 'Ungültige Eingabe';
+      msg = 'Das Formular enthält ungültige Eingaben.';
     showError(msg);
     setBusy(false);
+  }
+
+  function setBusy(b) {
+    if (b) {
+      $inputs.attr('disabled', true);
+      $btnSpinner.fadeIn();
+      $btnText.fadeOut();
+    } else {
+      $inputs.attr('disabled', false);
+      $btnSpinner.fadeOut();
+      $btnText.fadeIn();
+    }
   }
 
   function showError(msg) {
@@ -126,10 +118,6 @@ $(document).ready(function () {
 
   function hideError() {
     $reqError.slideUp();
-  }
-
-  function isLocalhost() {
-    return (location.hostname === "localhost" || location.hostname === "127.0.0.1");
   }
 
   init();

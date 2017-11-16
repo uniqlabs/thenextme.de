@@ -72,6 +72,9 @@ span.rv
   unicode-bidi: bidi-override
   direction: rtl
 
+.dn
+  display: none
+
 .btn, .btn-huge, .btn-cta-fixed
   min-height: 36px
   font-size: 13px
@@ -819,12 +822,10 @@ button.close:hover
     .q
       font-size: 18px
 
-.sec-signup
-  .row.req-error
-    display: none
+form
   .form-control
-    font-size: 15px
-    color: $darkGray
+  font-size: 15px
+  color: $darkGray
   .form-check-label
     font-size: 15px
     color: $darkGray
@@ -838,6 +839,8 @@ button.close:hover
     font-size: 12px
     color: $tertiary
     margin-top: 4px
+
+.sec-signup
   .card
     position: relative
     padding: 54px 16px 4px

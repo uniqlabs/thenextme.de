@@ -47,6 +47,9 @@ span.rv {
   unicode-bidi: bidi-override;
   direction: rtl; }
 
+.dn {
+  display: none; }
+
 .btn, .btn-huge, .btn-cta-fixed {
   min-height: 36px;
   font-size: 13px;
@@ -246,7 +249,7 @@ section, footer {
   height: calc(100vh + 10px);
   color: #fff;
   z-index: 0;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_01.jpg") no-repeat center center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/img/bg_cover_01.jpg") no-repeat center center;
   background-size: cover; }
   .sec-welcome .endorsements {
     min-width: 128px;
@@ -761,24 +764,23 @@ button.close:hover {
 @media(max-width: 575px) {
   .sec-faq .q {
     font-size: 18px; } }
-.sec-signup .row.req-error {
-  display: none; }
-.sec-signup .form-control {
+form {
   font-size: 15px;
   color: #333; }
-.sec-signup .form-check-label {
-  font-size: 15px;
-  color: #333; }
-.sec-signup input[type="checkbox"] {
-  margin-right: 4px; }
-.sec-signup .btn {
-  font-size: 16px;
-  padding: 16px 0;
-  margin-top: 32px; }
-.sec-signup .with-errors ul li {
-  font-size: 12px;
-  color: #f55;
-  margin-top: 4px; }
+  form .form-check-label {
+    font-size: 15px;
+    color: #333; }
+  form input[type="checkbox"] {
+    margin-right: 4px; }
+  form .btn {
+    font-size: 16px;
+    padding: 16px 0;
+    margin-top: 32px; }
+  form .with-errors ul li {
+    font-size: 12px;
+    color: #f55;
+    margin-top: 4px; }
+
 .sec-signup .card {
   position: relative;
   padding: 54px 16px 4px; }

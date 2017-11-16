@@ -24,8 +24,14 @@ $(document).ready(function () {
       return;
     }
 
-    var payload = jwt_decode(token);
-    var apiUrl = r('uggcf://havd-ncv-') + (env === 'dev' ? r('qri') : r('cebq')) + r('.urebxhncc.pbz/nhgu/rznvy');
+    var payload;
+    try {
+      payload = jwt_decode(token);
+    } catch (err) {
+      showError('Der Bestätigungslink hat ein ungültiges Format.');
+      return;
+    }
+    var apiUrl = getBaseUrl(env) + r('.urebxhncc.pbz/nhgu/rznvy');
 
     var onReqSuccess = function () {
       showSuccess('Danke, Deine E-Mail-Adresse wurde erfolgreich bestätigt!');
@@ -63,7 +69,7 @@ $(document).ready(function () {
     $newLinkRow.hide();
     showInfo('Ein neuer Link wird angefordert...');
 
-    var apiUrl = r('uggcf://havd-ncv-') + (env === 'dev' ? r('qri') : r('cebq')) + r('.urebxhncc.pbz/nhgu/rznvy/pynvz');
+    var apiUrl = getBaseUrl(env) + r('.urebxhncc.pbz/nhgu/rznvy/pynvz');
 
     var onReqSuccess = function () {
       showSuccess('Falls ' + email + ' zu einem unbestätigten Nutzerkonto gehört, wurde gerade' +
