@@ -946,6 +946,11 @@ footer {
   height: 70vh;
   color: #fff; }
 
+.full-cover-page {
+  width: 100%;
+  height: calc(100vh - 72px);
+  color: #fff; }
+
 .cover-how-it-works {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg_cover_16.jpg") no-repeat center top;
   background-size: cover, cover; }
