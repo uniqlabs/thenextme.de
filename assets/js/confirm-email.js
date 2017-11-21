@@ -31,7 +31,7 @@ $(document).ready(function () {
       showError('Der Bestätigungslink hat ein ungültiges Format.');
       return;
     }
-    var apiUrl = getBaseUrl(env) + r('.urebxhncc.pbz/nhgu/rznvy');
+    var apiUrl = getBaseUrl(env) + r('/nhgu/rznvy');
 
     var onReqSuccess = function () {
       showSuccess('Danke, Deine E-Mail-Adresse wurde erfolgreich bestätigt!');
@@ -69,7 +69,7 @@ $(document).ready(function () {
     $newLinkRow.hide();
     showInfo('Ein neuer Link wird angefordert...');
 
-    var apiUrl = getBaseUrl(env) + r('.urebxhncc.pbz/nhgu/rznvy/pynvz');
+    var apiUrl = getBaseUrl(env) + r('/nhgu/rznvy/pynvz');
 
     var onReqSuccess = function () {
       showSuccess('Falls ' + email + ' zu einem unbestätigten Nutzerkonto gehört, wurde gerade' +
