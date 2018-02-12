@@ -34,7 +34,6 @@ $(document).ready(function () {
 
   function onReqSuccess(data) {
     setBusy(false);
-    console.log(JSON.stringify(data));
     var msg = 'Unbekannter Fehler';
     if (!data || !data.result || !data.result.result) {
       showError(msg);
